@@ -1,0 +1,51 @@
+{
+  "version": "1.1.5",
+  "status": "DRAFT",
+  "correspondingSourceVerification": "NOT_VERIFIED",
+  "archive": {
+    "name": "YouTubeShortsDownloader-v1.1.5-Windows.zip",
+    "size": 138799840,
+    "sha256": "1ac5e3252b66efd4cdf302a1e9ba0e98f5e5889e1a9c83d04ca671398a42b846"
+  },
+  "components": {
+    "ytDlp": {
+      "version": "2026.10.21",
+      "binary": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp.exe",
+      "sha256": "33121d192d706e62f684a06f80918e3f3a8ba52ac3a65213b6951c39c7d9f555",
+      "source": "https://github.com/yt-dlp/yt-dlp/tree/2026.10.21",
+      "sourceArchive": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp.tar.gz",
+      "bundledThirdPartySources": "NOT_VERIFIED",
+      "license": "Unlicense; bundled components retain their licenses"
+    },
+    "ejs": {
+      "version": "0.8.0",
+      "source": "https://github.com/yt-dlp/ejs/tree/0.8.0",
+      "license": "Unlicense"
+    },
+    "deno": {
+      "version": "v2.9.8",
+      "source": "https://github.com/denoland/deno/tree/v2.9.8",
+      "v8Source": "https://github.com/v8/v8/tree/15.0.245.2",
+      "sha256": "924397800533d3eb0ed0c889b20ad70e18b970d93acd8135bc043f425e528266",
+      "license": "MIT; V8 BSD notices included"
+    },
+    "ffmpeg": {
+      "version": "9.0.2-essentials_build-www.gyan.dev",
+      "binary": "https://github.com/GyanD/codexffmpeg/releases/download/9.0.2/ffmpeg-9.0.2-essentials_build.zip",
+      "upstreamArchiveSHA256": "60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba",
+      "sha256": "3256173f3f8bffd7df12227c68adf68025edb1832273a9530688a7bb1ed8edec",
+      "ffprobeSHA256": "f0d36ecbbdd3bcfac3efa078c96c7271c2e68b3810595552ac3b7f17e9a65c52",
+      "sourceCommit": "https://github.com/FFmpeg/FFmpeg/commit/946fcce07b",
+      "license": "GPLv3",
+      "configuration": "FFmpeg-BUILDCONF.txt",
+      "externalLibraryVersions": "FFmpeg-README.txt",
+      "externalLibrarySourcesAndBuildScripts": "NOT_VERIFIED"
+    },
+    "native": {
+      "version": "1.0.1",
+      "sha256": "1325cbe26edd5feec962146f55c17532aec2a07cc4e005689f576d3edd81ab46",
+      "sourcePublished": false,
+      "license": "Existing project MIT license; no license change"
+    }
+  }
+}

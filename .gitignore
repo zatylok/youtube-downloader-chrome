@@ -1,0 +1,22 @@
+# Бинарные релизы размещаются только в GitHub Releases.
+*.zip
+*.7z
+*.exe
+*.dll
+*.mp4
+*.webm
+*.mkv
+*.reg
+*.pem
+*.key
+.env
+.env.*
+node_modules/
+target/
+.cache/
+artifacts/
+dist/
+native/data/
+profiles/
+backups/
+.updates/
