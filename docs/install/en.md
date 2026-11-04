@@ -1,6 +1,6 @@
 # Install VidoZavr 1.2.60
 
-**[Русский](ru.md) · [English](en.md) · [Deutsch](de.md) · [Español](es.md) · [Português do Brasil](pt-BR.md)**
+**[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
 All functions are free: YouTube videos, Shorts, channels, playlists, LIVE, cropping
 and download management. Processing runs locally. Use **Windows 11 x64, Chrome 127+

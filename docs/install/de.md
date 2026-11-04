@@ -1,6 +1,6 @@
 # VidoZavr 1.2.60 installieren
 
-**[Русский](ru.md) · [English](en.md) · [Deutsch](de.md) · [Español](es.md) · [Português do Brasil](pt-BR.md)**
+**[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
 Alle Funktionen sind kostenlos: YouTube-Videos, Shorts, Kanäle, Playlists, Livestreams,
 Zuschneiden und Downloadverwaltung. Die Verarbeitung erfolgt auf Ihrem PC.

@@ -1,6 +1,6 @@
 # Установка VidoZavr 1.2.60
 
-**[Русский](ru.md) · [English](en.md) · [Deutsch](de.md) · [Español](es.md) · [Português do Brasil](pt-BR.md)**
+**[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
 Все функции бесплатны: видео YouTube, Shorts, каналы, плейлисты, трансляции, обрезка
 и управление загрузками. Обработка выполняется на вашем ПК. Нужны **Windows 11 x64,

@@ -37,4 +37,4 @@ Do not change Chrome policies, disable security or interfere with unrelated exte
 to force enrollment. A third-party warning should be handled by its owner, not by
 blind automation.
 
-[Русский](ru.md) · [English](en.md) · [Deutsch](de.md) · [Español](es.md) · [Português do Brasil](pt-BR.md)
+[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)

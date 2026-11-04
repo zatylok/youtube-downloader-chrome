@@ -13,7 +13,10 @@ First installation needs Internet access. The three vendor packages total about
 and vendor tools are separate downloads. Neither Windows installer is Authenticode-signed;
 Ed25519 authenticates application updates, not the Windows installer.
 
-[Installation guides in five languages](README.md) ·
+Interface languages and maintained guides: [Русский](ru.md) | [English (US)](en.md) |
+[Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md). The Windows installer remains Russian.
+
+[Installation guides](README.md) ·
 [Pinned dependency catalog](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/online-dependencies.json) ·
 [Notices and license texts](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Documentation.zip)
 

@@ -11,7 +11,7 @@ download management directly on YouTube. Media processing runs on your Windows P
 ## [Download VidoZavr.exe — recommended / Скачать — рекомендуется](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr.exe)
 
 **Windows 11 x64 · Google Chrome 127+ · Internet for installation**  
-**[Русский](docs/install/ru.md) · [English](docs/install/en.md) · [Deutsch](docs/install/de.md) · [Español](docs/install/es.md) · [Português do Brasil](docs/install/pt-BR.md)**
+**[Русский](docs/install/ru.md) | [English (US)](docs/install/en.md) | [Français](docs/install/fr.md) | [Deutsch](docs/install/de.md) | [العربية](docs/install/ar.md)**
 
 Advanced: [Extension ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Extension.zip) ·
 Optional: [Automatic installer — Beta/Experimental](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Experimental.exe) ·
@@ -48,7 +48,8 @@ Default extension location:
 **Use the path shown by Setup if you chose a different location.** Keep this folder
 and Developer mode enabled. The [illustrated English guide](docs/install/en.md) and
 [пошаговая инструкция на русском](docs/install/ru.md) cover every step and common errors.
-Setup is Russian; the guides are available in five languages.
+The extension and maintained guides support **Русский, English (US), Français, Deutsch,
+العربية**. The Windows Setup interface remains Russian.
 
 ## Why Windows components and Internet are needed
 

@@ -1,9 +1,10 @@
 # Install VidoZavr 1.2.60
 
-**[Русский](ru.md) · [English](en.md) · [Deutsch](de.md) · [Español](es.md) · [Português do Brasil](pt-BR.md)**
+**[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
 All functions are free. Use Windows 11 x64, Google Chrome 127+ and Internet for first
-installation. The Windows Setup interface is Russian; these guides translate its labels.
+installation. The extension's five interface languages are **Русский, English (US), Français,
+Deutsch, العربية**. The Windows Setup interface is Russian; these guides translate its labels.
 
 ## Recommended: Windows installer, then manual Chrome connection
 
