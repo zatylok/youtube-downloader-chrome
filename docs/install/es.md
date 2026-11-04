@@ -23,7 +23,7 @@ las herramientas locales mediante Native Messaging. **La extensión sola no bast
    **Инструкция = Instrucciones** abre la guía instalada. Guarde la ruta exacta para el paso 7.
 4. **Abra `chrome://extensions`** en el perfil de Chrome que usa para YouTube.
    Escriba la dirección en la barra: es una página interna, no un sitio web.
-5. Active **Modo de desarrollador** en la parte superior derecha.
+5. Active **Modo Desarrollador** en la parte superior derecha.
 6. Pulse **Cargar descomprimida**. Se abrirá el selector de carpetas de Windows.
 7. **Seleccione exactamente la carpeta instalada `extension` del paso 3.**
    Navegue hasta ella o pegue la ruta exacta de Setup en el campo **Carpeta** y
@@ -48,7 +48,7 @@ el menú Inicio; use la carpeta elegida durante la instalación y su subcarpeta 
 
 ### Identificar los controles
 
-La captura está en **inglés**: **1 Developer mode = Modo de desarrollador**,
+La captura está en **inglés**: **1 Developer mode = Modo Desarrollador**,
 **2 Load unpacked = Cargar descomprimida**. Chromium 149 real, sin ventana visible;
 la captura excluye el espacio sin usar.
 
@@ -122,7 +122,7 @@ Eliminar la tarjeta puede borrar sus ajustes guardados en el navegador.
 |---|---|
 | Falta el manifiesto / no se puede cargar | Repita Cargar descomprimida y seleccione exactamente `extension` con `manifest.json` dentro. Descargas, la carpeta superior y el ZIP no sirven. |
 | Hay tarjeta, pero el descargador no está conectado | Compruebe el componente Windows para **el mismo usuario de Windows**, el perfil de Chrome y la carpeta exacta. `Check.cmd` en la instalación comprueba archivos/registro; el menú comprueba la conexión activa. Repare con Setup tras terminar el trabajo si hace falta. |
-| Modo de desarrollador desactivado | Actívelo en el perfil correcto, manténgalo activo y compruebe que la tarjeta existente está activada. |
+| Modo Desarrollador desactivado | Actívelo en el perfil correcto, manténgalo activo y compruebe que la tarjeta existente está activada. |
 | Perfil equivocado o copias duplicadas | Busque el perfil y la carpeta permanente que eligió. No añada otra copia para reparar la conexión; eliminar una tarjeta puede borrar sus ajustes. |
 | Actualización terminada, versión antigua en Chrome | Tras finalizar el trabajo protegido, recargue la **tarjeta existente** y las pestañas de YouTube. No borre datos pausados. |
 | Red, rutas VPN o fallo de descarga/hash | Compruebe la conexión del descargador, además de Chrome. El túnel dividido puede usar rutas distintas. Reintente la fuente oficial; no use espejos alternativos, cambie hashes ni desactive protecciones. |
