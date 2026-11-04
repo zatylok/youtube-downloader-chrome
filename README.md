@@ -1,88 +1,156 @@
-# YouTube Video & Shorts Downloader
+# V1D0Z@VR 🦖 — VidoZavr 1.2.60
 
-![Версия 1.1.5](https://img.shields.io/badge/версия-1.1.5-blue)
-![Windows 11 x64](https://img.shields.io/badge/Windows-11_x64-0078D4)
-![Google Chrome 120+](https://img.shields.io/badge/Chrome-120%2B-4285F4)
+Free YouTube downloads and video tools directly on YouTube: videos, Shorts, channels,
+playlists, LIVE, cropping and download management. Media processing runs locally.
+Author support is optional; there are no paid features or subscriptions.
 
-Бесплатное личное расширение Chrome для Windows: сохраняйте **обычные видео YouTube и YouTube Shorts** в MP4 со звуком. Выбирайте качество, добавляйте видео в очередь и следите за каждой загрузкой отдельно. Подписка и подключение Google-аккаунта не нужны.
+**All functions are free.** No PRO subscription, paywall or mandatory donation.
+Version 1.2.60 improves safe download recovery and first-activation Shorts auto-scroll.
 
-**[Windows ZIP — GitHub Releases](https://github.com/zatylok007-web/youtube-downloader-chrome/releases)** · [Установка](docs/INSTALL_RU.md) · [Обновление](docs/UPDATE_RU.md) · [Помощь](docs/TROUBLESHOOTING_RU.md)
+## Download and installation
 
-> **Статус 1.1.5: релиз подготовлен как черновик.** Публичный ZIP ещё не выпущен: требуется завершить проверку соответствующих исходников включённых GPL-компонентов. Черновик доступен владельцу репозитория, посетителям архив пока недоступен. [Подробности](docs/THIRD_PARTY_LICENSES.md#статус-публичного-распространения).
+Use the [latest official release](https://github.com/zatylok/youtube-downloader-chrome/releases/latest).
+Windows 11 x64 and Chrome 127+ are required. Choose one installation route:
 
-## Возможности
+[**Download VidoZavr.exe**](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr.exe) ·
+[Extension ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Extension.zip) ·
+[Experimental installer](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Experimental.exe) ·
+[SHA-256 checksums](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/SHA256SUMS.txt)
 
-- Скачивание обычных видео и Shorts с видео и звуком.
-- Выбор качества: максимальное, до 1080p или до 720p.
-- Очередь с отдельными полосами прогресса и отменой каждой задачи.
-- Перетаскиваемое плавающее окно и компактное меню расширения.
-- Завершённые, отменённые и ошибочные строки остаются до ручного скрытия.
-- Совместимые дорожки объединяются без перекодирования. Другой вариант качества или перекодирование требуют отдельного выбора.
-- Обработка на компьютере: без подписки, извлечения cookies и подключения Google-аккаунта.
+| Route | File | Behavior |
+|---|---|---|
+| **Recommended** | **VidoZavr.exe** | Installs Windows components and the managed extension folder. Never opens or controls Chrome. Connect the extension manually. |
+| Advanced | VidoZavr-Extension.zip plus Windows components | An independent unpacked extension copy. Its files require manual updates. |
+| **Beta / Experimental** | VidoZavr-Experimental.exe | Preserved automatic Chrome enrollment. It may require Developer mode, permission decisions or manual recovery; success is not guaranteed. |
 
-![Кнопка после микрофона в шапке YouTube и список отдельных загрузок](assets/screenshots/watch-downloads.png)
+Both installers use the same application identity and directory. Do not install two
+separate copies or load duplicate extensions. The Experimental option has observed
+profile/other-extension limitations and incomplete clean-Windows verification.
+Read its [limitations](docs/install/EXPERIMENTAL.md) before choosing it.
 
-Реальный снимок из изолированного профиля Chromium: кнопка обычного видео находится после микрофона; у двух завершённых загрузок свои 100%, отменённая строка сохранена. Изображение не изменялось, аккаунт в профиль не подключался.
+Recommended steps:
 
-## Требования
+1. Verify the installer hash, run VidoZavr.exe and finish the Windows installation.
+2. Open `chrome://extensions` in the intended Chrome profile.
+3. Enable **Developer mode**, select **Load unpacked**, then select the installed
+   `extension` directory shown by Setup. `manifest.json` must be at that directory's root.
+4. Open V1D0Z@VR and check **Downloader connected**, or the equivalent in its selected language.
 
-| Компонент | Требование |
-| --- | --- |
-| Система | Windows 11, x64 |
-| Браузер | Google Chrome 120 или новее, установка распакованного расширения |
-| Интернет | Доступ к YouTube и его медиасерверам |
-| Установка | Папка текущего пользователя, без прав администратора |
+The default extension directory is
+`%LOCALAPPDATA%\Programs\YouTube Video & Shorts Downloader\extension`.
+The final Setup page shows the exact path if you selected another location.
+The EXE already supplies this extension: the ZIP is not another required download.
 
-Python, Rust и Node.js устанавливать не нужно: готовый Windows-комплект содержит загрузчик, yt-dlp, Deno/EJS, FFmpeg и FFprobe. Локальный сервер, служба Windows и глобальная настройка PATH не требуются.
+Complete guides: [Русский](docs/install/ru.md) · [English](docs/install/en.md) ·
+[Deutsch](docs/install/de.md) · [Español](docs/install/es.md) ·
+[Português do Brasil](docs/install/pt-BR.md).
 
-Основной браузер — Google Chrome. Изолированные проверки выполнены также в Chromium; отдельная совместимость с Edge и другими браузерами не заявлена. Chrome на Android не поддерживается. Установка через Chrome Web Store не предоставляется.
+## Why a Windows EXE is required
 
-## Установка
+Chrome uses a small Rust Native Messaging host to communicate with local media tools.
+The ZIP alone cannot download media. Setup installs that host, its configuration,
+the extension, local installation/update scripts and required notices; it registers
+the host for the current Windows user. No manual registry editing, administrator
+elevation, Python, Rust or Node.js installation is required. Setup is not a Windows service.
 
-После публикации релиза:
+The recommended installer verifies Windows files and registration. It does **not**
+claim that you have connected Chrome or that live Native Messaging was tested.
 
-1. Откройте [GitHub Releases](https://github.com/zatylok007-web/youtube-downloader-chrome/releases).
-2. В разделе **Assets** скачайте **`YouTubeShortsDownloader-v1.1.5-Windows.zip`** и файл с окончанием `.sha256`. Автоматические архивы **Source code (zip/tar.gz)** содержат документацию репозитория и для установки приложения не подходят.
-3. Полностью распакуйте ZIP в постоянную папку пользователя. Не запускайте установку внутри архива и не перемещайте папку после установки.
-4. Откройте `chrome://extensions` и включите **«Режим разработчика»**.
-5. Нажмите **«Загрузить распакованное расширение»** и выберите папку **`extension`** внутри `YouTubeShortsDownloader`.
-6. Запустите **`Setup.cmd`** из этой же папки обычным пользователем.
-7. Обновите карточку расширения в Chrome, откройте его меню и проверьте подключение загрузчика. Для проверки файлов и регистрации есть **`Check.cmd`**.
-8. Откройте YouTube Shorts или обычное видео и нажмите кнопку со стрелкой.
+## Internet downloads and exact providers
 
-[Пошаговая инструкция](docs/INSTALL_RU.md) содержит проверку SHA-256 и ожидаемый ID. В Chrome сохраняется прежнее название карточки: **«Загрузка YouTube Shorts»**; обычные видео тоже поддерживаются.
+Our EXE and application-update assets do not bundle the four vendor executables.
+If missing, Setup obtains these pinned packages via HTTPS and checks their exact
+sizes and SHA-256 before installing them:
 
-## Использование и настройки
+| Component | Version | Upstream | Actual distribution provider |
+|---|---|---|---|
+| yt-dlp | 2026.10.21 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | [yt-dlp GitHub Release EXE](https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp.exe) |
+| Deno | 2.9.8 | [Deno](https://github.com/denoland/deno) | [Deno GitHub Release ZIP](https://github.com/denoland/deno/releases/download/v2.9.8/deno-x86_64-pc-windows-msvc.zip) |
+| FFmpeg / FFprobe | 9.0.2 | [FFmpeg](https://ffmpeg.org/) | [Gyan Doshi essentials ZIP](https://github.com/GyanD/codexffmpeg/releases/download/9.0.2/ffmpeg-9.0.2-essentials_build.zip) |
 
-На Shorts кнопка находится справа от верхнего края активного плеера. На обычном видео — справа от микрофона возле поиска в верхней панели YouTube. Если шапка слишком узкая, используйте меню расширения → **«Скачать текущее видео»**.
+Verified tools already installed can be reused. First installation is not fully offline.
+Application updates come separately from authenticated releases in this VidoZavr repository.
+Vendor maintenance uses the pinned vendor catalog, not arbitrary latest versions.
+The [component audit](docs/install/COMPONENTS.md) gives exact byte sizes, archive and
+executable hashes, provider/upstream distinctions, bundled components, destinations
+and failure behavior.
 
-В меню → **«Настройки и диагностика»** выберите качество и папку загрузки. По умолчанию видео сохраняются в системную папку **«Загрузки → YouTube Shorts»**. Для вертикальных видео предел качества относится к короткой стороне.
+## SHA-256 and Windows warnings
 
-Перетаскивайте окно за заголовок. **«Отменить»** останавливает выбранную задачу; маленький **×** скрывает её результат, сохраняя файл и историю. Верхний **×** скрывает окно. Следующее скачивание открывает сохранённый список. Закрытие меню или переход к другому видео не отменяют очередь; после закрытия Chrome незавершённой задаче может потребоваться повторное скачивание.
+Compare files with `SHA256SUMS.txt` and their `.sha256` sidecars from the same release.
+For example, `Get-FileHash .\VidoZavr.exe -Algorithm SHA256` is a read-only check.
 
-## Обновление и удаление
+The Windows installers currently **lack Authenticode signing**. Windows SmartScreen
+may report an unknown publisher. Verify source and hash; cancel if uncertain.
+Do not disable antivirus, SmartScreen or Chrome security. Ed25519 signing of
+application updates is a distinct mechanism and does not make the EXE Windows-signed.
 
-Распакуйте следующий релиз **отдельно от установленной папки**, дождитесь конца очереди и временно выключите расширение. Запустите **`Update.cmd` из нового комплекта**, затем включите и обновите прежнюю карточку расширения и страницы YouTube. Скрипт создаёт резервную копию; настройки, история и MP4 сохраняются. Для возврата предыдущих файлов предусмотрен **`Rollback.cmd`**. [Порядок обновления и отката](docs/UPDATE_RU.md).
+## Chrome permissions
 
-Для удаления дождитесь окончания загрузок, выключите расширение и запустите **`Uninstall.cmd`** из установленной папки. Затем удалите его карточку в Chrome. Скрипт снимает только собственную регистрацию Native Messaging; видео, настройки, история и резервные копии остаются. [Подробности удаления](docs/INSTALL_RU.md#удаление).
+Keep Developer mode enabled for the unpacked extension. The stable extension ID is
+`bkihgeeibbodemeibfdcglojjkiepnlf`; its Native Messaging host is
+`com.local.shorts_downloader`.
 
-## Если что-то не работает
+| Permission / access | Purpose |
+|---|---|
+| `nativeMessaging` | Communicate with the installed local downloader. |
+| `storage`, `unlimitedStorage` | Persist preferences and the download-list UI, including larger histories. |
+| `activeTab`, `scripting` | Work with the current supported page and restore content scripts. |
+| `alarms` | Schedule application/vendor status checks. |
+| YouTube desktop/mobile hosts | Inject download controls and support YouTube navigation and tools. |
+| `returnyoutubedislikeapi.com/votes*` | Request dislike counts for a video ID. |
 
-- **Нет кнопки:** обновите страницу YouTube и проверьте видимость кнопки в настройках. В узком окне используйте меню расширения.
-- **Загрузчик отключён:** запустите `Check.cmd`, затем при необходимости `Setup.cmd` из установленной папки и обновите карточку расширения.
-- **Нужен выбор качества:** нажмите «Выбрать» в строке задачи. Это ожидание решения, не успешное скачивание.
-- **YouTube просит подтвердить, что вы человек:** сайт иногда отказывает анонимным загрузчикам. Подключение Google-аккаунта и извлечение cookies не используются; доступность каждого видео не гарантируется.
+Read any Chrome approval yourself. Neither installer is a browser security bypass.
 
-[Все способы диагностики](docs/TROUBLESHOOTING_RU.md). Не отключайте антивирус, SmartScreen или защиту браузера ради установки.
+## Privacy and local processing
 
-## Конфиденциальность
+Media files and task state are processed and stored on your PC. Downloads contact
+YouTube and its media CDN. The dislike feature requests the video ID from Return
+YouTube Dislike with credentials omitted. Update checks contact GitHub; dependency
+acquisition contacts the providers above. Those services receive normal network requests.
+The downloader's current media command disables importing browser cookies/accounts.
+This is not an independent certification of no telemetry, universal anonymity,
+antivirus approval or complete offline operation.
 
-Видео, настройки и история обрабатываются локально. Приложение не содержит телеметрии, рекламы или собственного сервиса сбора данных. Для загрузки оно обращается к YouTube и его медиасерверам; проверка версии yt-dlp обращается к GitHub. Cookies, браузерные профили и пароли не извлекаются. Локальные диагностические файлы могут содержать пути и ID роликов — проверяйте их перед отправкой в Issues.
+## Updating and uninstalling
 
-## Лицензии и обратная связь
+Signed application updates maintain the managed installation directory, check
+Ed25519, repository identity and file inventory, and defer while protected work remains.
+If Chrome still displays the old version, reload the existing extension card and
+refresh YouTube tabs. Seamless activation across all Chrome builds is not promised.
+An independently extracted ZIP folder needs matching replacement files and a manual
+card reload; Setup does not maintain it.
 
-Используются [yt-dlp](https://github.com/yt-dlp/yt-dlp), [yt-dlp-ejs](https://github.com/yt-dlp/ejs), [Deno](https://github.com/denoland/deno), [V8](https://v8.dev/) и [FFmpeg](https://ffmpeg.org/). Версии, исходные ссылки, уведомления и незакрытый вопрос распространения описаны в [лицензионной справке](docs/THIRD_PARTY_LICENSES.md). Существующая [лицензия оригинального кода](LICENSE) сохранена без изменения; сторонние компоненты имеют собственные условия. Этот репозиторий содержит публичную документацию, а не полный исходный код приложения.
+Run Setup again to repair the Windows installation after work finishes. If files are
+busy, the guard may require temporarily disabling the extension; do not delete paused
+tasks or partial files to force an update. Uninstall using Windows Settings → Apps →
+V1D0Z@VR, then remove the Chrome card. Downloaded media, `native\data` and `.updates`
+are retained; removing the Chrome card can remove its browser-local preferences.
 
-Об ошибках сообщайте через [GitHub Issues](https://github.com/zatylok007-web/youtube-downloader-chrome/issues): укажите версию, Windows/Chrome, шаги и краткий текст ошибки. Не прикладывайте профили браузера, cookies, токены или неочищенную личную историю.
+## Troubleshooting and licensing
 
-Проект неофициальный и не связан с YouTube или Google. Названия и товарные знаки принадлежат соответствующим владельцам.
+Report reproducible bugs through [GitHub Issues](https://github.com/zatylok/youtube-downloader-chrome/issues)
+or the existing developer contact [@zatylok007](https://t.me/zatylok007). Include the
+version and short reproduction steps; omit browser profiles, cookies, tokens and private history.
+
+Author projects: [Food Swipe](https://foodswipe.ru) and the
+[currency/crypto Telegram bot](https://t.me/KursyValutNowBot).
+[Optional coffee and cat-treat support](https://donatr.ee/zatylok) never unlocks features;
+all functions remain free.
+
+For connection errors, verify the same Windows user, the installed Windows component,
+and the exact unpacked folder. `Check.cmd` checks local files/registration; the popup
+shows the live connection. Network/hash failures must be retried from the official
+source without changing pins or substituting mirrors. Split-tunnel VPNs can route
+Chrome and the downloader differently.
+
+The project's original code uses [MIT](LICENSE). Vendor binaries and bundled libraries
+retain their own licenses. yt-dlp's Windows bundle is GPLv3+ with separate notices;
+Deno is MIT with V8/other notices; the selected Gyan static FFmpeg build is GPLv3,
+including external libraries. The installer includes Inno Setup/Pascal Script/LZMA
+and Rust dependency notices. See [component attribution](docs/install/COMPONENTS.md)
+and the release `licenses` directory. We do not claim that the entire combined
+dependency stack has one license or that vendor repackaging source obligations
+have been satisfied by a link alone. Not affiliated with YouTube or Google.
+
+Development-only tools and publisher secrets are not included in the installation.
