@@ -1,5 +1,28 @@
 # VidoZavr 1.2.60 — components, downloads and integrity
 
+## In plain language
+
+The extension adds controls to YouTube. A small Windows component runs the downloads
+and media processing on your PC, which Chrome cannot do alone. Setup installs our
+application and obtains three verified packages: yt-dlp retrieves media, Deno handles
+YouTube JavaScript and the update controller, and FFmpeg/FFprobe process and check
+video and audio. You do not install Python, Rust or Node.js yourself.
+
+First installation needs Internet access. The three vendor packages total about
+168 MiB; their exact providers, versions and hashes are below. Application updates
+and vendor tools are separate downloads. Neither Windows installer is Authenticode-signed;
+Ed25519 authenticates application updates, not the Windows installer.
+
+[Installation guides in five languages](README.md) ·
+[Pinned dependency catalog](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/online-dependencies.json) ·
+[Notices and license texts](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Documentation.zip)
+
+The documentation ZIP is the unchanged release-time snapshot. The guides on the
+repository's `main` branch are maintained separately. References to `licenses/...`
+below identify files in that ZIP and the installation, not missing repository pages.
+
+## Technical reference
+
 This is an audit of the pinned 1.2.60 build, not a list of current upstream versions.
 The machine-readable catalog is supplied as `online-dependencies.json` in the release
 and installation. All four tools below are required by this build; they are not optional
@@ -76,6 +99,9 @@ VidoZavr; only the catalog's exact four executable entries are extracted.
   not an LGPL-only build. See [Gyan's build information](https://www.gyan.dev/ffmpeg/builds/),
   [FFmpeg licensing](https://ffmpeg.org/legal.html), `licenses/FFmpeg-LICENSE`,
   `licenses/FFmpeg-README.txt` and `licenses/FFmpeg-BUILDCONF.txt`.
+  The [official FFmpeg source mirror](https://github.com/FFmpeg/FFmpeg) and
+  [license text](https://github.com/FFmpeg/FFmpeg/blob/master/COPYING.GPLv3)
+  are also available on GitHub if the informational website is unreachable.
 
 Keep the corresponding notices and copyright attributions with redistributed material.
 The project's original code is MIT; that does not relicense vendor binaries or their

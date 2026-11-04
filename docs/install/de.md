@@ -1,100 +1,134 @@
 # VidoZavr 1.2.60 installieren
 
-[Varianten und Sprachen](README.md) · [Komponenten](COMPONENTS.md)
+**[Русский](ru.md) · [English](en.md) · [Deutsch](de.md) · [Español](es.md) · [Português do Brasil](pt-BR.md)**
 
-## Zweck und Voraussetzungen
+Alle Funktionen sind kostenlos: YouTube-Videos, Shorts, Kanäle, Playlists, Livestreams,
+Zuschneiden und Downloadverwaltung. Die Verarbeitung erfolgt auf Ihrem PC.
+Sie benötigen **Windows 11 x64, Chrome 127+ und Internet bei der Erstinstallation**.
+Python, Rust und Node.js sind nicht nötig. Die Windows-Komponente verbindet Chrome
+über Native Messaging mit den lokalen Werkzeugen. **Die Erweiterung allein reicht nicht.**
 
-V1D0Z@VR lädt kostenlos YouTube-Videos, Shorts, Kanäle, Playlists und Livestreams
-herunter, mit Werkzeugen zum Zuschneiden und Verwalten der Aufgaben.
-Die Medienverarbeitung erfolgt lokal. Der Windows-Host verbindet Chrome über Native
-Messaging mit yt-dlp, Deno und FFmpeg; die Erweiterung allein reicht nicht aus.
-Benötigt werden Windows 11 x64, Chrome und Internet bei der Erstinstallation.
-Python, Rust und Node.js müssen Benutzer nicht installieren.
+## Empfohlene Installation: neun Schritte
 
-## Herunterladen und prüfen
+1. **[VidoZavr.exe herunterladen](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr.exe).**
+   Die zusätzliche ZIP ist nicht nötig. Nutzen Sie das offizielle Release und vergleichen
+   Sie die [SHA-256-Prüfsumme](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/SHA256SUMS.txt).
+2. **Die EXE starten und die Windows-Komponenten installieren.** Setup ist russisch:
+   **Далее = Weiter**, **Готово = Fertigstellen**. Warten Sie auf **Компоненты Windows
+   установлены** (Windows-Komponenten installiert). Fehlende festgelegte Werkzeuge
+   werden heruntergeladen und geprüft; passende geprüfte Dateien werden wiederverwendet.
+   Setup öffnet Chrome nicht und prüft keine aktive Browserverbindung.
+3. **Die letzte Setup-Seite vor dem Schließen lesen.** Das Pfadfeld zeigt den dauerhaften
+   Erweiterungsordner. **Папка расширения = Erweiterungsordner** öffnet ihn;
+   **Инструкция = Anleitung** öffnet die installierte Anleitung. Den genauen Pfad für Schritt 7 merken.
+4. **`chrome://extensions`** im Chrome-Profil öffnen, das Sie für YouTube verwenden.
+   Geben Sie die Adresse in die Adressleiste ein; dies ist eine interne Seite, keine Website.
+5. Rechts oben den **Entwicklermodus** einschalten.
+6. **Entpackte Erweiterung laden** anklicken. Die Windows-Ordnerauswahl öffnet sich.
+7. **Genau den installierten Ordner `extension` aus Schritt 3 auswählen.**
+   Navigieren Sie dorthin oder fügen Sie den genauen Setup-Pfad in das Feld **Ordner**
+   ein und bestätigen Sie mit **Ordner auswählen** (russisches Windows: **Папка**,
+   **Выбор папки**). `manifest.json` muss direkt darin liegen. Wählen Sie den Ordner,
+   nicht die Datei, „Downloads“, den übergeordneten Installationsordner oder eine ZIP.
+8. **Eine aktivierte Karte V1D0Z@VR 🦖** mit Version **1.2.60** prüfen.
+   Im Entwicklermodus lautet die ID `bkihgeeibbodemeibfdcglojjkiepnlf`.
+9. **Chrome-Puzzlemenü „Erweiterungen“ → V1D0Z@VR** öffnen.
+   Prüfen Sie **Downloader verbunden** (russisch: **Загрузчик подключён**).
+   Bei Bedarf das Symbol anheften. Eine Karte allein belegt noch keine Native-Verbindung.
 
-Verwenden Sie die [offiziellen Releases](https://github.com/zatylok/youtube-downloader-chrome/releases).
-Wählen Sie die Dateien der Version 1.2.60 aus demselben offiziellen Release.
-Laden Sie **VidoZavr.exe** und die `.sha256`-Datei herunter. Die Erweiterungs-ZIP ist
-optional. SHA-256 mit `SHA256SUMS.txt` desselben Releases vergleichen, etwa mit
-`Get-FileHash .\VidoZavr.exe -Algorithm SHA256`. Der Befehl liest nur die Datei;
-zur Installation sind keine Befehle oder Registry-Eingriffe nötig.
+Standardordner:
 
-Die EXE besitzt **keine Windows-Authenticode-Signatur**. SmartScreen kann einen
-unbekannten Herausgeber melden. Quelle und Hash prüfen, im Zweifel abbrechen.
-Schutzfunktionen nicht deaktivieren. Ed25519 für Programmupdates ist davon getrennt.
+`%LOCALAPPDATA%\Programs\YouTube Video & Shorts Downloader\extension`
 
-## Windows-Komponenten installieren
+**Bei einer benutzerdefinierten Installation kann der Pfad abweichen. Maßgeblich ist
+der genaue Pfad auf der letzten Setup-Seite.** Behalten Sie den dauerhaften Ordner
+und lassen Sie den Entwicklermodus eingeschaltet. Nach dem Schließen von Setup finden
+Sie die Anleitung im Startmenü; verwenden Sie den gewählten Installationsordner und
+dessen Unterordner `extension`.
 
-Der Installer ist russisch: **Далее = Weiter**, **Готово = Fertigstellen**.
-Die empfohlene EXE starten und auf „Компоненты Windows установлены“ (Windows-Komponenten
-installiert) warten. Fehlende festgelegte Werkzeuge werden bezogen und geprüft;
-vorhandene geprüfte Versionen werden wiederverwendet. Chrome wird nicht geöffnet.
-Eine aktive Browserverbindung wird nicht als geprüft ausgegeben. Die letzte Seite
-zeigt den genauen Ordner. **Инструкция** öffnet die Anleitung, **Папка расширения**
-den Ordner; beide Aktionen benötigen einen ausdrücklichen Klick.
+### Die Bedienelemente
 
-## Chrome manuell verbinden
+Die Aufnahme zeigt die **englische** Oberfläche: **1 Developer mode = Entwicklermodus**,
+**2 Load unpacked = Entpackte Erweiterung laden**. Echter Headless-Chromium 149,
+ohne die ungenutzte Fläche.
 
-1. Im gewünschten Profil `chrome://extensions` öffnen.
-2. **Entwicklermodus** einschalten.
-3. **Entpackte Erweiterung laden** wählen.
-4. Den vom Installer angezeigten Ordner `extension` auswählen. Standard:
-   `%LOCALAPPDATA%\Programs\YouTube Video & Shorts Downloader\extension`.
-   `manifest.json` muss unmittelbar darin liegen.
-5. Eine V1D0Z@VR-Karte mit ID `bkihgeeibbodemeibfdcglojjkiepnlf` prüfen.
-6. Im Menü **Downloader verbunden** oder den gleichbedeutenden Status der gewählten Sprache prüfen.
+![Englische Bedienelemente mit den Nummern 1 und 2](images/chrome-controls-en.png)
 
-Den Entwicklermodus eingeschaltet lassen. Berechtigungen selbst lesen und entscheiden;
-der Installer umgeht keine Chrome-Sicherheitsabfrage.
+Die echte Erweiterungskarte zeigt Namen, Version, ID und aktivierten Schalter.
 
-## ZIP und Experimental
+![VidoZavr-Karte in englischem Chromium](images/extension-card-en.png)
 
-Die EXE installiert bereits die verwaltete Erweiterung; eine zweite Kopie ist unnötig.
-Für eine unabhängige Kopie die ZIP in einen dauerhaften Ordner entpacken und diesen
-stattdessen laden. Chrome kann die ZIP nicht direkt laden. Die Windows-Komponente
-bleibt nötig. Nicht beide Kopien laden. Unabhängige Dateien mit der passenden
-offiziellen ZIP manuell aktualisieren und die bestehende Karte neu laden.
+<details>
+<summary>Beispiel einer bestätigten Verbindung (russische Oberfläche)</summary>
 
-Die [Beta/Experimental-Variante](EXPERIMENTAL.md) behält die automatische Einbindung.
-Entwicklermodus, Berechtigungsentscheidungen oder manuelle Wiederherstellung können
-erforderlich sein. Andere Erweiterungen oder die Profilauswahl können sie blockieren.
-Sie ist weder garantiert noch vollständig unbeaufsichtigt; ein sauberes Windows ist
-nicht vollständig geprüft. Beide Installer verwenden dieselbe Installation.
+**1** markiert „Загрузчик подключён“ / „Downloader verbunden“. Die vorhandene Aufnahme
+zeigt eine echte isolierte Native-Antwort, keinen neuen manuellen Installationstest.
+
+![Bestätigte Native-Verbindung im Erweiterungsmenü](images/connected.png)
+
+</details>
+
+Die Bilder stammen aus isoliertem **Headless-Chromium 149**, nicht Chrome 156 oder
+einem frisch installierten Windows. Die Karte dient der Veranschaulichung; die
+[ursprüngliche Gesamtansicht](images/chrome-extensions.png) bleibt verfügbar.
+Setup-Abschluss und Windows-Ordnerauswahl werden nicht durch nachgebildete Bilder dargestellt.
+
+## Weitere Installationswege
+
+- **Für Fortgeschrittene — [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Extension.zip):**
+  Die Windows-Komponente mit der empfohlenen EXE installieren, die ZIP in einen eigenen
+  dauerhaften Ordner entpacken und diesen **statt** der verwalteten Kopie laden.
+  Chrome lädt keine ZIP direkt. Setup und signierte Updates pflegen diesen unabhängigen
+  Ordner nicht: Dateien mit der passenden offiziellen ZIP ersetzen und die bestehende
+  Karte neu laden. Nicht beide Kopien laden.
+- **Beta/Experimental — [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Experimental.exe):**
+  versucht die automatische Einbindung mit derselben Windows-Installation.
+  Entwicklermodus, Profilauswahl oder Berechtigungsentscheidungen können nötig sein;
+  andere Erweiterungen können stören. Weder Erfolg noch unbeaufsichtigter Ablauf
+  sind garantiert. Die Prüfung auf einem sauberen Windows ist unvollständig.
+  Lesen Sie die [Einschränkungen](EXPERIMENTAL.md).
+
+## Sicherheit und heruntergeladene Werkzeuge
+
+Die EXEs haben **keine Windows-Authenticode-Signatur**. SmartScreen kann einen unbekannten
+Herausgeber melden. Offizielle Quelle und Hash prüfen, im Zweifel abbrechen.
+Schutzfunktionen nicht abschalten. Optionale Prüfung: `Get-FileHash .\VidoZavr.exe -Algorithm SHA256`.
+
+Setup bezieht yt-dlp **2026.10.21**, Deno **2.9.8** und Gyan Doshis FFmpeg/FFprobe
+**9.0.2** direkt von den festgelegten Anbietern und prüft Größe/SHA-256.
+Diese Anbieter-EXEs sind nicht in unseren Downloads enthalten. Die Erstinstallation
+ist nicht vollständig offline. [Komponenten, Quellen, Lizenzen und Hashes](COMPONENTS.md).
+**Ed25519-signierte Programmupdates sind von der Windows-Installersignatur getrennt.**
 
 ## Aktualisieren und deinstallieren
 
-Signierte Programmupdates pflegen den installierten Ordner und warten auf das Ende
-geschützter Arbeit. Zeigt Chrome noch die alte Version, die bestehende Karte unter
-`chrome://extensions` neu laden und YouTube-Tabs aktualisieren. Eine nahtlose Aktivierung
-in jeder Chrome-Version wird nicht zugesichert. Die Karte für Updates nicht entfernen.
-Zur Reparatur Setup nach Arbeitsende erneut starten. Bei belegten Dateien die Erweiterung
-bei entsprechender Meldung vorübergehend deaktivieren. Pausierte Aufgaben und Teildateien
-behalten. Über Windows-Einstellungen → Apps → V1D0Z@VR deinstallieren, danach die
-Chrome-Karte entfernen. Videos, `native\data` und `.updates` bleiben erhalten.
+Signierte Programmupdates pflegen den installierten Ordner und warten, solange geschützte
+Medienaufgaben bestehen. Zeigt Chrome danach eine alte Version, auf der bestehenden
+Karte unter `chrome://extensions` **Neu laden** wählen und YouTube-Tabs aktualisieren.
+Karte und Einstellungen behalten; eine nahtlose Aktivierung wird nicht für jede
+Chrome-Version zugesichert. Unabhängige ZIP-Ordner erfordern manuelle Dateiupdates.
+
+Zur Reparatur Setup nach Arbeitsende erneut ausführen und Meldungen zu belegten Dateien
+befolgen. Pausierte Aufgaben und Teildateien erhalten. Deinstallation: **Windows-Einstellungen →
+Apps → V1D0Z@VR → Deinstallieren**, danach die Chrome-Karte entfernen.
+Videos, `native\data` und `.updates` bleiben erhalten. Das Entfernen der Karte kann
+ihre im Browser gespeicherten Einstellungen löschen.
 
 ## Fehlerbehebung
 
-- Keine Verbindung: denselben Windows-Benutzer, Windows-Komponenten und den richtigen
-  Ordner prüfen; nach Arbeitsende reparieren und Chrome neu starten.
-- Manifest fehlt: entpackten Ordner statt ZIP oder übergeordnetem Ordner auswählen.
-- Netzwerk-/Hashfehler: offizielle Quelle erneut versuchen, Prüfsummen nicht umgehen.
-  Chrome und Downloader können unterschiedliche VPN-Routen verwenden.
-- Eine Offline-Erstinstallation erhält keine fehlenden Werkzeuge. Reparaturen können
-  geprüfte vorhandene Dateien nutzen; vollständiger Offlinebetrieb wird nicht versprochen.
-- `Check.cmd` prüft Dateien und Registrierung; den Live-Status im Erweiterungsmenü prüfen.
+| Problem | Unterstützte Vorgehensweise |
+|---|---|
+| Manifest fehlt / konnte nicht geladen werden | Erneut die entpackte Erweiterung laden und genau `extension` mit `manifest.json` auswählen. Downloads, der übergeordnete Ordner und die ZIP sind falsch. |
+| Karte vorhanden, Downloader nicht verbunden | Windows-Komponente für **denselben Windows-Benutzer**, richtiges Chrome-Profil und genauen Ordner prüfen. `Check.cmd` im Programmordner prüft Dateien/Registrierung; das Erweiterungsmenü die aktive Verbindung. Bei Bedarf nach Arbeitsende mit Setup reparieren. |
+| Entwicklermodus aus | Im richtigen Profil einschalten, eingeschaltet lassen und die bestehende Karte aktivieren. |
+| Falsches Profil oder doppelte Kopien | Das Profil der Installation und den beabsichtigten dauerhaften Ordner ermitteln. Keine weitere Kopie zur Verbindungsreparatur laden; das Entfernen einer Karte kann Einstellungen löschen. |
+| Update beendet, Chrome-Version noch alt | Nach Ende geschützter Arbeit die **bestehende Karte** neu laden und YouTube-Tabs aktualisieren. Keine pausierten Daten löschen. |
+| Netzwerk, VPN-Routen oder Download-/Hashfehler | Verbindung auch für den Downloader prüfen, nicht nur Chrome. Split-Tunneling kann unterschiedliche Routen bewirken. Offizielle Quelle erneut versuchen; keine fremden Spiegel, Hashänderungen oder abgeschalteten Schutzfunktionen. |
+| SmartScreen-Warnung | Der Installer ist unsigniert. Quelle/Prüfsumme prüfen, im Zweifel abbrechen. |
+| Experimental durch andere Erweiterung blockiert | Fremde Abfragen nicht blind bestätigen oder andere Erweiterungen deaktivieren. Eigenes Setup normal schließen und die empfohlene manuelle Installation nutzen. |
 
-## Abbildungen
-
-Echter isolierter Headless-Chromium 149 mit russischer Oberfläche und ergänzten
-Nummern: **1** Entwicklermodus, **2** entpackte Erweiterung laden. Das leere Testprofil
-belegt keine manuelle Einbindung oder Installation auf einem sauberen Windows.
-
-![Entwicklermodus und Ordnerauswahl](images/chrome-extensions.png)
-
-Im echten Erweiterungsmenü wurde eine gültige Native-Antwort empfangen.
-**1** markiert den verbundenen Downloader. Keine persönlichen Konten oder Besitzerprofile.
-
-![Verbindungsstatus](images/connected.png)
-
-[README](../../README.md): Berechtigungen und Netzwerk. [Komponentenübersicht](COMPONENTS.md): Quellen und Lizenzen.
+Hilfe: [GitHub Issues](https://github.com/zatylok/youtube-downloader-chrome/issues) oder
+[@zatylok007](https://t.me/zatylok007). Version, genaue Meldung und kurze Schritte nennen;
+keine Cookies, Tokens oder privaten Profile senden.
+[Berechtigungen und Datenschutz](../../README.md#windows-warnings-permissions-and-privacy) ·
+[Varianten und Sprachen](README.md)

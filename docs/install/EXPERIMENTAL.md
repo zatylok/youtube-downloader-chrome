@@ -1,30 +1,40 @@
-# Automatic installer — Beta / Experimental, 1.2.60
+# Automatic installer — Beta/Experimental, 1.2.60
 
-**The recommended installer is VidoZavr.exe with manual Chrome enrollment.**
-`experimental/VidoZavr-Experimental.exe` is the separate automatic-enrollment option.
-It uses the same extension ID, Native Host, installation directory and signed-update
-mechanism; do not treat it as a second application or load duplicate extension copies.
+**For most users, choose [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr.exe)
+and the [manual Chrome guide](en.md). The separate ZIP is not required.**
 
-The existing implementation is preserved in `installer/YouTubeDownloader.iss` and
-`installer/resources/ChromeEnrollment.ps1`. Its focused and isolated GUI tests remain
-available. An explicit `--experimental` build selects it; the default selects the
-Windows-only `installer/YouTubeDownloader-Manual.iss` instead. No enrollment algorithm
-was rewritten for this packaging change.
+[Download VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Experimental.exe)
+only if you want to try automatic Chrome enrollment.
 
-This option may open a dedicated Chrome window, ask for a Chrome profile, require
-you to enable Developer mode and wait for Chrome permission decisions. It never
-legitimately bypasses those decisions. Other extensions, including observed CAdES
-and McAfee prompts, can block it. Clean-Windows verification remains **NOT VERIFIED**.
-Earlier isolated Chrome 156 tests passed initial enrollment, a real Native response
-and normal restart, but repeat enrollment was blocked by an unrelated CAdES prompt.
+The public filename has no subdirectory. In the local build output it is stored as
+`experimental/VidoZavr-Experimental.exe`; that is not a public download URL.
+Both installers use the same extension ID, Windows Native Host, installation directory
+and signed updates. This is an alternative installer, not a second application.
+Do not run both concurrently or load duplicate extension copies.
 
-On the owner's PC, the prior r2 helper was observed waiting at a hidden profile-choice
-form before it created a Chrome marker window. That path has no dialog deadline.
-This remains a known limitation of the preserved experimental implementation, not a
-claim that the recommended manual installer follows that path. Do not describe the
-experimental option as guaranteed, fully unattended or generally qualified.
+## What may require your attention
 
-If it stalls, use the standard installer and the [manual guide](en.md). Do not change
-Chrome policies, unrelated extensions or security software to force automation.
-Do not launch both installers concurrently. If Windows reports files in use, close
-your own Setup normally and finish protected work before retrying; do not discard data.
+- Chrome may ask you to choose a profile or enable **Developer mode**.
+- You must read and decide Chrome permission requests yourself.
+- Other extensions can interrupt the flow. CAdES and McAfee prompts have been observed;
+  VidoZavr should not accept, disable or dismiss them for you.
+- Profile selection can stall. A prior helper waited at a hidden profile-choice form
+  with no dialog deadline; the final Experimental variant preserves that implementation.
+
+Earlier isolated Chrome 156 tests verified initial enrollment, a genuine Native
+response and normal restart. Repeated enrollment was also blocked by an unrelated
+CAdES prompt. **Clean-Windows verification is incomplete.** The installer is not
+guaranteed or fully unattended, and those earlier results do not prove success on
+every profile or PC.
+
+## If it does not finish
+
+Close your own Setup normally and use the recommended installer with the
+[manual instructions](en.md). If Windows reports files in use, finish protected
+downloads and follow its message before retrying. Preserve paused tasks and partials.
+
+Do not change Chrome policies, disable security or interfere with unrelated extensions
+to force enrollment. A third-party warning should be handled by its owner, not by
+blind automation.
+
+[Русский](ru.md) · [English](en.md) · [Deutsch](de.md) · [Español](es.md) · [Português do Brasil](pt-BR.md)
