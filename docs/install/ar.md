@@ -2,7 +2,7 @@
 
 <div dir="rtl" lang="ar">
 
-# تثبيت VidoZavr 1.2.60
+# تثبيت VidoZavr 1.2.61
 
 جميع الوظائف مجانية: تنزيل فيديوهات YouTube وShorts والقنوات وقوائم التشغيل
 والبث المباشر، مع أدوات القص وإدارة التنزيلات. تتم معالجة الوسائط على جهازك.
@@ -16,9 +16,9 @@
 
 ## التثبيت الموصى به: تسع خطوات
 
-1. **نزّل [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr.exe).**
+1. **نزّل [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.61/VidoZavr.exe).**
    لا تحتاج إلى تنزيل ملف ZIP أيضًا. استخدم الإصدار الرسمي وقارن
-   [قيمة SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/SHA256SUMS.txt).
+   [قيمة SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.61/SHA256SUMS.txt).
 2. **شغّل ملف EXE وثبّت مكوّنات Windows.** واجهة المُثبّت روسية:
    <code dir="ltr">Далее</code> تعني «التالي»، و<code dir="ltr">Готово</code> تعني «إنهاء».
    انتظر رسالة <code dir="ltr">Компоненты Windows установлены</code>، أي «تم تثبيت مكوّنات Windows».
@@ -38,7 +38,7 @@
    (<code dir="ltr">Выбор папки</code>).
    يجب أن يكون <code dir="ltr">manifest.json</code> داخل المجلد مباشرة.
    اختر المجلد، لا الملف نفسه ولا مجلد «التنزيلات» ولا المجلد الرئيسي للبرنامج ولا ملف ZIP.
-8. **تحقق من وجود بطاقة واحدة مفعّلة للإضافة <span dir="ltr">V1D0Z@VR 🦖</span> بالإصدار <code dir="ltr">1.2.60</code>.**
+8. **تحقق من وجود بطاقة واحدة مفعّلة للإضافة <span dir="ltr">V1D0Z@VR 🦖</span> بالإصدار <code dir="ltr">1.2.61</code>.**
    يظهر معرّف الإضافة في وضع مطوّر البرامج:
    <code dir="ltr">bkihgeeibbodemeibfdcglojjkiepnlf</code>.
 9. **افتح قائمة إضافات Chrome من رمز قطعة الأحجية، ثم اختر <span dir="ltr">V1D0Z@VR</span>.**
@@ -90,13 +90,13 @@
 
 ## خيارات التثبيت الأخرى
 
-- **للمستخدمين المتقدمين — [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Extension.zip):**
+- **للمستخدمين المتقدمين — [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.61/VidoZavr-Extension.zip):**
   ثبّت مكوّن Windows باستخدام ملف EXE الموصى به، وفك ضغط ZIP في مجلد دائم مستقل،
   ثم حمّل هذا المجلد **بدلًا من** النسخة المُدارة.
   لا يستطيع Chrome تحميل ملف ZIP نفسه. لا يحدّث Setup ولا نظام التحديثات الموقّعة
   هذه النسخة المستقلة: استبدل ملفاتها بملفات ZIP الرسمي المطابق لكل إصدار، ثم أعد تحميل
   بطاقتها الحالية. لا تحمّل النسختين معًا.
-- **Beta/Experimental — [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.60/VidoZavr-Experimental.exe):**
+- **Beta/Experimental — [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.61/VidoZavr-Experimental.exe):**
   يحاول ربط Chrome تلقائيًا باستخدام تثبيت Windows نفسه.
   قد يتطلب تفعيل وضع مطوّر البرامج أو اختيار الملف الشخصي أو اتخاذ قرارات بشأن الأذونات،
   وقد تعيق إضافات أخرى العملية. لا يُضمن النجاح أو التشغيل دون تدخل.
