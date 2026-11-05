@@ -22,10 +22,14 @@ on Windows. All functions are free, with no PRO tier or subscription.
   до завершения трансляции.
 - **Каналы и плейлисты.** Загрузка видео из подборок и со страниц каналов.
 - **Обрезка Shorts.** Выбор области кадра для сохранения.
+- **Отрезки видео.** Задайте время начала и конца, чтобы скачать нужную часть ролика.
 - **Возобновление загрузок.** Использование сохранённых данных, когда источник
   поддерживает безопасное продолжение.
 - **Управление задачами.** Очередь, индивидуальный прогресс, отмена и настраиваемые папки.
 - **Удобство просмотра.** Автопрокрутка Shorts, тёмная и светлая темы.
+- **Качество воспроизведения YouTube.** Автоматический выбор максимального доступного
+  качества или ручной выбор другого варианта во время просмотра. Настройка относится
+  к просмотру видео; качество скачиваемого файла выбирается отдельно.
 
 Все функции бесплатны. Нет PRO, подписок или платных ограничений.
 Качество и доступность начала LIVE зависят от исходного видео и выбранного формата.
@@ -104,7 +108,11 @@ Record ongoing LIVE from the original broadcast beginning when it is available,
 and continue to completion. Crop the visible area of a Short, resume interrupted
 downloads where the source supports continuation, and manage tasks with progress,
 cancellation and configurable folders. Automatic Shorts scrolling and light/dark
-themes are included. Media processing is local. Every function is free.
+themes are included. Set a start and end time to download a video segment.
+For YouTube playback, select the highest available quality automatically or choose
+another available quality manually while watching. Playback quality controls the
+video you watch; download quality has its own setting.
+Media processing is local. Every function is free.
 
 The recommended EXE installs Windows components. Load its installed extension folder
 manually in Chrome; no extra ZIP is needed. The standalone ZIP requires the Windows
