@@ -1,4 +1,4 @@
-КОМПОНЕНТЫ ОНЛАЙН-УСТАНОВЩИКА V1D0Z@VR 1.2.60
+КОМПОНЕНТЫ ОНЛАЙН-УСТАНОВЩИКА V1D0Z@VR 1.2.62
 
 В VidoZavr.exe включены утверждённые расширение и native-программа, установочные
 скрипты, инструкции, публичная идентичность расширения и тексты уведомлений.
@@ -10,7 +10,7 @@
 Установщик использует RemObjects Pascal Script:
 https://github.com/remobjects/pascalscript
 Уведомление: licenses\Pascal-Script-LICENSE.md.
-LZMA SDK 26.02 Игоря Павлова — public domain; licenses\LZMA-SDK.txt.
+LZMA SDK 26.02 Игоря Павлова - public domain; licenses\LZMA-SDK.txt.
 Расширенные архивные DLL 7-Zip в Setup не включаются. ZIP обрабатывает
 уже имеющаяся в Windows библиотека .NET System.IO.Compression.
 
@@ -19,12 +19,12 @@ LZMA SDK 26.02 Игоря Павлова — public domain; licenses\LZMA-SDK.tx
 Закреплённые URL, версии, имена и SHA-256: online-dependencies.json.
 Setup не проксирует эти файлы через GitHub Releases автора расширения.
 
-yt-dlp 2026.10.21 — Unlicense. Windows EXE содержит компоненты с отдельными
+yt-dlp 2026.10.21 - Unlicense. Windows EXE содержит компоненты с отдельными
 лицензиями, в том числе GPL. Уведомления: licenses\yt-dlp-THIRD_PARTY_LICENSES.txt.
-Внутри него есть yt-dlp-ejs 0.8.0 — Unlicense, licenses\EJS-LICENSE.
-Deno 2.9.8 — MIT с уведомлениями сторонних компонентов; V8 15.0.245.2-rusty — BSD.
+Внутри него есть yt-dlp-ejs 0.8.0 - Unlicense, licenses\EJS-LICENSE.
+Deno 2.9.8 - MIT с уведомлениями сторонних компонентов; V8 15.0.245.2-rusty - BSD.
 См. licenses\Deno-LICENSE.md и licenses\V8-LICENSE.
-FFmpeg/FFprobe 9.0.2 — GPLv3, статическая essentials-сборка Gyan с libx264.
+FFmpeg/FFprobe 9.0.2 - GPLv3, статическая essentials-сборка Gyan с libx264.
 Это не LGPL-only. --enable-nonfree отсутствует. Основной исходный commit:
 https://github.com/FFmpeg/FFmpeg/commit/946fcce07b
 Точная конфигурация и версии внешних библиотек: licenses\FFmpeg-README.txt и
@@ -39,7 +39,7 @@ licenses\FFmpeg-BUILDCONF.txt. Условия: licenses\FFmpeg-LICENSE.
 исходникам, включая необходимые внешние библиотеки и сборочные материалы.
 Одна ссылка на основной репозиторий FFmpeg не доказывает полноту такого набора.
 
-ПРИЛОЖЕНИЕ И VENDOR-КОМПОНЕНТЫ — РАЗДЕЛЬНЫЕ ПОСТАВКИ
+ПРИЛОЖЕНИЕ И VENDOR-КОМПОНЕНТЫ - РАЗДЕЛЬНЫЕ ПОСТАВКИ
 В Setup и подписанные assets V1D0Z@VR входят программные файлы приложения,
 расширение, native host, скрипты, каталог совместимости и уведомления.
 yt-dlp.exe, deno.exe, ffmpeg.exe и ffprobe.exe не включаются в эти assets.
@@ -50,7 +50,7 @@ V1D0Z@VR не поддерживаются. Закрытые ключи и publi
 в runtime. Эти сведения описывают фактический состав поставки и не являются
 универсальным юридическим заключением для сторонних перепаковок.
 
-Варианты 1.2.60: рекомендуемый VidoZavr.exe устанавливает компоненты Windows
+Варианты 1.2.62: рекомендуемый VidoZavr.exe устанавливает компоненты Windows
 без открытия Chrome; отдельный VidoZavr-Experimental.exe сохраняет прежнее
-автоматическое подключение как Beta/Experimental. Отдельный ZIP — расширение,
+автоматическое подключение как Beta/Experimental. Отдельный ZIP - расширение,
 не замена Windows-компонентов. У всех вариантов одна identity и один native host.
