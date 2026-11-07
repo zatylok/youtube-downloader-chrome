@@ -1,10 +1,10 @@
-# VidoZavr 1.2.62 - components, downloads and integrity
+# VidoZavr 1.2.63 - components, downloads and integrity
 
 ## In plain language
 
 The extension adds controls to YouTube. A small Windows component runs the downloads
-and media processing on your PC, which Chrome cannot do alone. Setup installs our
-application and obtains three verified packages: yt-dlp retrieves media, Deno handles
+and media processing on your PC, which Chrome cannot do alone. Setup and the ZIP component installer install our
+application and obtain three verified packages: yt-dlp retrieves media, Deno handles
 YouTube JavaScript and the update controller, and FFmpeg/FFprobe process and check
 video and audio. You do not install Python, Rust or Node.js yourself.
 
@@ -17,8 +17,8 @@ Interface languages and maintained guides: [Русский](ru.md) | [English (U
 [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md). The Windows installer remains Russian.
 
 [Installation guides](README.md) ·
-[Pinned dependency catalog](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/online-dependencies.json) ·
-[Notices and license texts](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr-Documentation.zip)
+[Pinned dependency catalog](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/online-dependencies.json) ·
+[Notices and license texts](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Documentation.zip)
 
 The documentation ZIP is the unchanged release-time snapshot. The guides on the
 repository's `main` branch are maintained separately. References to `licenses/...`
@@ -26,17 +26,19 @@ below identify files in that ZIP and the installation, not missing repository pa
 
 ## Technical reference
 
-This is an audit of the pinned 1.2.62 build, not a list of current upstream versions.
+This is an audit of the pinned 1.2.63 build, not a list of current upstream versions.
 The machine-readable catalog is supplied as `online-dependencies.json` in the release
 and installation. All four tools below are required by this build; they are not optional
-plugins. The optional items are the independent extension ZIP, Experimental installer
-and voluntary author support.
+plugins. The EXEs and the standalone ZIP are alternative ways to install the same
+application.
 
 ## Inside our installer
 
-`VidoZavr.exe` contains the Chrome extension, the Rust Native Host
+The standard `VidoZavr.exe` contains the Chrome extension, the Rust Native Host
 `native/shorts-native.exe`, first-party installation/update scripts, pinned compatibility
 catalogs, public publisher/extension identity, instructions and license notices.
+The ZIP includes the Chrome folder separately. Its `Установить компоненты.exe`
+installs the Native Host, tools and Windows registration independently of that folder.
 The Native EXE includes its compiled Rust libraries; notices are in `licenses/rust`.
 It does not embed Python as a separately installed runtime or install Node.js/Rust.
 
@@ -52,7 +54,7 @@ variant additionally uses Windows UI Automation and Windows Forms. Google Chrome
 is installed separately by the user; the recommended Setup neither downloads nor starts it.
 
 **yt-dlp.exe, deno.exe, ffmpeg.exe and ffprobe.exe are not embedded in either of our
-installer variants, the extension ZIP or our signed application-update payload.**
+installer variants, the standalone ZIP or our signed application-update payload.**
 The Experimental variant additionally embeds the existing Chrome enrollment helper.
 Neither variant includes signing secrets, browser profiles or user media.
 
@@ -126,14 +128,17 @@ Paths are relative to the chosen installation directory, normally
 
 ## Later downloads and failures
 
-Application updates use the official
+For standard and Experimental installations, signed application updates use the official
 [VidoZavr repository](https://github.com/zatylok/youtube-downloader-chrome), immutable
 repository ID `1430910943`. The client requests repository/release metadata from
 `api.github.com`, then `v1d0zvr-update.json` and hash-named `.bin` assets from that
 repository's ordinary releases on `github.com`/`release-assets.githubusercontent.com`.
 It validates the Ed25519 envelope, repository binding, inventory, sizes and SHA-256,
 waits for protected media work, and uses the existing transactional updater/rollback.
-It never accepts an unsigned local draft as a production update.
+It never accepts an unsigned local draft as a production update. For the split ZIP,
+install the component EXE from the next verified official ZIP and replace the
+unpacked extension folder at its original path. The signed app updater manages
+only the EXE-installed Chrome folder.
 
 Vendor maintenance is separate: checks compare the approved catalog; repair obtains
 only missing/mismatched pinned tools from the vendor URLs above. It does not download
@@ -148,8 +153,8 @@ requests. This documentation does not assert an independently certified absence 
 all telemetry or universal offline operation.
 
 Network failure, unexpected redirect, size mismatch or SHA-256 mismatch refuses the
-component before use. Required-tool failure prevents completion and shows a Russian
-error with Retry/Cancel; valid installed data is not discarded. Initial acquisition
+component before use. Required-tool failure prevents completion and reports a Russian
+error. Retry using the same installation method after correcting the error. Initial acquisition
 has bounded transport attempts. Do not use alternate mirrors, alter expected hashes
 or disable security to force an install. Browser connectivity does not prove that a
 separate native process has the same route, especially with split-tunnel VPNs.

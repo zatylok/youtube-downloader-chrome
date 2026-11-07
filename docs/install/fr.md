@@ -1,4 +1,4 @@
-# Installer VidoZavr 1.2.62
+# Installer VidoZavr 1.2.63
 
 **[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
@@ -15,9 +15,9 @@ traduits ci-dessous.
 
 ## Installation recommandée : neuf étapes
 
-1. **Téléchargez [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr.exe).**
+1. **Téléchargez [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr.exe).**
    Le ZIP de l'extension n'est pas nécessaire en plus. Utilisez la version officielle
-   et comparez son [SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/SHA256SUMS.txt).
+   et comparez son [SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/SHA256SUMS.txt).
 2. **Lancez l'EXE et installez les composants Windows.** Le programme est en russe :
    **Далее = Suivant**, **Готово = Terminer**. Attendez le message **Компоненты Windows
    установлены** (« Composants Windows installés »). Les outils manquants aux versions
@@ -37,7 +37,7 @@ traduits ci-dessous.
    Le fichier `manifest.json` doit se trouver directement dans ce dossier.
    Sélectionnez le dossier, pas le fichier, Téléchargements, le dossier parent de
    l'installation ou un ZIP.
-8. **Vérifiez qu'une seule carte V1D0Z@VR 🦖 est activée**, en version **1.2.62**.
+8. **Vérifiez qu'une seule carte V1D0Z@VR 🦖 est activée**, en version **1.2.63**.
    En mode développeur, son ID est `bkihgeeibbodemeibfdcglojjkiepnlf`.
 9. **Ouvrez le menu Extensions de Chrome, représenté par une pièce de puzzle → V1D0Z@VR.**
    Vérifiez **Téléchargeur connecté** (en russe : **Загрузчик подключён**).
@@ -85,13 +85,14 @@ Aucune capture française, page de fin de Setup ou fenêtre de sélection de dos
 
 ## Autres options d'installation
 
-- **Avancée - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr-Extension.zip) :**
-  installez le composant Windows avec l'EXE recommandé, extrayez le ZIP dans un dossier
-  permanent indépendant et chargez ce dossier **à la place** de la copie gérée.
-  Chrome ne charge pas directement un ZIP. Setup et les mises à jour signées ne
-  maintiennent pas cette copie : remplacez ses fichiers avec le ZIP officiel
-  correspondant à chaque version et rechargez sa carte existante. Ne chargez pas les deux copies.
-- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr-Experimental.exe) :**
+- **ZIP autonome - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Extension.zip)**
+  Téléchargez uniquement cette archive, vérifiez son SHA-256 et extrayez tous les
+  fichiers dans un dossier permanent. Lancez le fichier **Установить компоненты.exe**
+  (installer les composants Windows) avec votre compte Windows habituel.
+  Il installe le Native Host et les outils manquants vérifiés. Suivez ensuite les
+  étapes 4 à 9 avec le dossier `extension` de l'archive, qui contient `manifest.json`.
+  `Check.cmd` dans le dossier des composants vérifie les fichiers et l'enregistrement.
+- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Experimental.exe) :**
   tente une connexion automatique à Chrome avec la même installation Windows.
   Le mode développeur, le choix du profil ou des décisions sur les autorisations
   peuvent être nécessaires ; d'autres extensions peuvent interrompre la procédure.
@@ -106,7 +107,7 @@ un éditeur inconnu. Vérifiez la source officielle et l'empreinte ; en cas de d
 annulez. Ne désactivez jamais les protections pour forcer l'installation.
 Vérification facultative : `Get-FileHash .\VidoZavr.exe -Algorithm SHA256`.
 
-Setup obtient directement auprès des fournisseurs désignés yt-dlp **2026.10.21**,
+Setup et l'installateur de composants du ZIP obtiennent directement auprès des fournisseurs désignés yt-dlp **2026.10.21**,
 Deno **2.9.8** et FFmpeg/FFprobe **9.0.2**, dans la distribution Windows de Gyan Doshi.
 Il vérifie la taille et le SHA-256. Ces EXE tiers ne sont pas inclus dans nos fichiers
 à télécharger. La première installation ne peut pas se faire entièrement hors ligne.
@@ -116,25 +117,28 @@ Windows de l'installateur.**
 
 ## Mettre à jour et désinstaller
 
-Les mises à jour signées maintiennent le dossier installé et attendent tant que des
-tâches multimédias protégées subsistent. Si Chrome affiche encore une ancienne version
-ensuite, cliquez sur **Recharger** sur la carte existante dans `chrome://extensions`,
-puis actualisez les onglets YouTube. Conservez la carte et ses préférences ; une
-activation sans intervention n'est pas garantie sur toutes les versions de Chrome.
-Les dossiers ZIP indépendants doivent être mis à jour manuellement.
+**EXE standard et Experimental.** Les mises à jour signées maintiennent leur
+propre dossier et attendent la fin des tâches protégées. Relancez le Setup
+correspondant pour réparer. Si Chrome affiche une ancienne version, rechargez
+la carte existante dans `chrome://extensions`, puis les onglets YouTube.
 
-Pour réparer, relancez Setup après la fin des tâches et suivez tout message indiquant
-des fichiers occupés. Conservez les tâches en pause et les fichiers partiels.
-Désinstallez via **Paramètres Windows → Applications → V1D0Z@VR → Désinstaller**,
-puis retirez la carte de Chrome. Les médias téléchargés, `native\data` et `.updates`
-restent présents. Retirer la carte peut effacer les préférences conservées dans le navigateur.
+**Installation ZIP.** Vérifiez et extrayez séparément le nouveau ZIP officiel.
+Après la fin des tâches protégées, exécutez son `Установить компоненты.exe`.
+Remplacez le dossier `extension` complet au même emplacement, puis rechargez
+la carte et les onglets. Les deux parties du ZIP se mettent à jour manuellement.
+Pour réparer, relancez l'installateur des composants. En cas de conflit, utilisez
+la procédure de l'installation existante.
+
+Retirez les composants Windows dans **Paramètres Windows → Applications → V1D0Z@VR**.
+Les médias, `native\data`, `.updates` et le dossier d'extension extrait sont conservés.
+Retirez la carte Chrome manuellement si besoin. Cela peut effacer ses préférences.
 
 ## Dépannage
 
 | Problème | Action prise en charge |
 |---|---|
 | Manifeste absent ou impossible à charger | Relancez Charger l'extension non empaquetée et sélectionnez exactement `extension` contenant `manifest.json`. Téléchargements, le dossier parent et le ZIP ne conviennent pas. |
-| La carte existe, mais le téléchargeur est déconnecté | Vérifiez que le composant Windows est installé pour **le même utilisateur Windows**, dans le bon profil Chrome et avec le bon dossier. `Check.cmd` dans le dossier d'installation vérifie les fichiers et l'enregistrement ; le menu vérifie la connexion réelle. Réparez avec Setup après la fin des tâches si nécessaire. |
+| La carte existe, mais le téléchargeur est déconnecté | Vérifiez que le composant Windows est installé pour **le même utilisateur Windows**, dans le bon profil Chrome et avec le bon dossier. `Check.cmd` dans le dossier d'installation vérifie les fichiers et l'enregistrement ; le menu vérifie la connexion réelle. Relancez l'installateur correspondant à votre méthode. |
 | Mode développeur désactivé | Activez-le dans le profil voulu, laissez-le actif et vérifiez que la carte existante est activée. |
 | Mauvais profil ou copies en double | Identifiez le profil d'installation et le dossier permanent voulu. N'ajoutez pas une copie pour réparer la connexion ; retirer une carte peut supprimer ses préférences. |
 | Mise à jour terminée, ancienne version dans Chrome | Après la fin des tâches protégées, rechargez la **carte existante** et les onglets YouTube. Ne supprimez pas les données en pause. |
@@ -142,8 +146,5 @@ restent présents. Retirer la carte peut effacer les préférences conservées d
 | Avertissement SmartScreen | L'installateur n'est pas signé. Vérifiez sa source et son empreinte ; annulez en cas de doute. |
 | Experimental bloqué par une autre extension | N'acceptez pas aveuglément des demandes sans rapport et ne désactivez pas d'autres extensions. Fermez normalement votre Setup et utilisez l'installation manuelle recommandée. |
 
-Aide : [GitHub Issues](https://github.com/zatylok/youtube-downloader-chrome/issues) ou
-[@zatylok007](https://t.me/zatylok007). Indiquez la version, l'erreur exacte et de courtes
-étapes ; n'envoyez jamais de cookies, jetons ou profils privés.
 [Autorisations et confidentialité](../../README.md#windows-warnings-permissions-and-privacy) |
 [Options et langues](README.md)

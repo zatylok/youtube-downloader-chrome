@@ -1,16 +1,17 @@
-# Automatic installer - Beta/Experimental, 1.2.62
+# Automatic installer - Beta/Experimental, 1.2.63
 
-**For most users, choose [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr.exe)
+**For most users, choose [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr.exe)
 and the [manual Chrome guide](en.md). The separate ZIP is not required.**
 
-[Download VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr-Experimental.exe)
+[Download VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Experimental.exe)
 only if you want to try automatic Chrome enrollment.
 
 The public filename has no subdirectory. In the local build output it is stored as
 `experimental/VidoZavr-Experimental.exe`; that is not a public download URL.
 Both installers use the same extension ID, Windows Native Host, installation directory
 and signed updates. This is an alternative installer, not a second application.
-Do not run both concurrently or load duplicate extension copies.
+Do not run both concurrently or load duplicate extension copies. If the standalone
+ZIP components are already installed, follow the ZIP update and removal steps in the guides.
 
 ## What may require your attention
 

@@ -1,4 +1,4 @@
-# Install VidoZavr 1.2.62
+# Install VidoZavr 1.2.63
 
 **[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
@@ -10,9 +10,9 @@ Messaging; **the extension alone is not enough**.
 
 ## Recommended installation: nine steps
 
-1. **Download [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr.exe).**
+1. **Download [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr.exe).**
    You do not need the extension ZIP as well. Use the official release and compare
-   its [SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/SHA256SUMS.txt).
+   its [SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/SHA256SUMS.txt).
 2. **Run the EXE and install Windows components.** Setup is Russian: **Далее = Next**,
    **Готово = Finish**. Wait for **Компоненты Windows установлены** (Windows components
    installed). Missing pinned tools are downloaded and checked; verified installed
@@ -29,7 +29,7 @@ Messaging; **the extension alone is not enough**.
    field and choose **Select Folder** (Russian Windows: **Папка**, **Выбор папки**).
    The selected folder must contain `manifest.json` directly. Select the folder,
    not the manifest file, Downloads, the parent installation directory or a ZIP.
-8. **Confirm one enabled V1D0Z@VR 🦖 card**, version **1.2.62**.
+8. **Confirm one enabled V1D0Z@VR 🦖 card**, version **1.2.63**.
    With Developer mode on, its ID is `bkihgeeibbodemeibfdcglojjkiepnlf`.
 9. **Open Chrome's puzzle-piece Extensions menu → V1D0Z@VR.**
    Check **Downloader connected** (Russian: **Загрузчик подключён**).
@@ -72,13 +72,14 @@ Windows picker screenshot is being simulated.
 
 ## Other installation options
 
-- **Advanced - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr-Extension.zip):**
-  install the Windows component with the recommended EXE, extract the ZIP into a
-  separate permanent folder, then load that folder **instead of** the managed one.
-  Chrome cannot load the ZIP itself. Setup and signed updates do not maintain that
-  independent copy: replace its files from each matching official ZIP and reload its
-  existing card. Do not load both copies.
-- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.62/VidoZavr-Experimental.exe):**
+- **Standalone ZIP - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Extension.zip):**
+  Download only this archive, verify its SHA-256, and extract all files to a permanent
+  folder. Run the included **Установить компоненты.exe** (Install Windows components)
+  as your regular Windows user. It installs the Native Host and missing verified tools.
+  After Windows components are ready, follow steps 4-9 with the ZIP's `extension`
+  folder containing `manifest.json`. Use the extracted folder for Chrome.
+  `Check.cmd` in the Windows components folder verifies files and registration.
+- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Experimental.exe):**
   attempts automatic enrollment using the same Windows installation. Developer mode,
   profile selection or permission decisions may be needed; other extensions may
   interrupt it. It is not guaranteed or fully unattended. Clean-Windows verification
@@ -90,7 +91,7 @@ The EXEs are **not Windows Authenticode-signed**; SmartScreen may show an unknow
 publisher. Check the official source/hash and cancel if uncertain. Never disable
 security to force installation. Optional check: `Get-FileHash .\VidoZavr.exe -Algorithm SHA256`.
 
-Setup obtains yt-dlp **2026.10.21**, Deno **2.9.8**, and Gyan Doshi's FFmpeg/FFprobe
+Setup and the ZIP component installer obtain yt-dlp **2026.10.21**, Deno **2.9.8**, and Gyan Doshi's FFmpeg/FFprobe
 **9.0.2** directly from their pinned providers, with size/SHA-256 checks. Those vendor
 EXEs are not bundled in our downloads. First installation is not fully offline.
 [Components, providers, licenses and exact hashes](COMPONENTS.md) explain the details.
@@ -98,23 +99,27 @@ EXEs are not bundled in our downloads. First installation is not fully offline.
 
 ## Updates and uninstall
 
-Signed application updates maintain the installed folder and wait while protected
-media work remains. If Chrome still shows an older version afterwards, click **Reload**
-on the existing card in `chrome://extensions`, then refresh YouTube tabs.
-Keep the existing card and preferences; seamless activation is not promised on every
-Chrome build. Independent ZIP folders need manual file updates.
+**Standard and Experimental EXEs.** Signed updates maintain their managed folder
+and wait for protected media work. Rerun the respective Setup for repair.
+If Chrome still shows an old version, reload the existing card in
+`chrome://extensions` and refresh YouTube tabs.
 
-For repair, rerun the recommended Setup after work finishes and follow any busy-file
-message. Keep paused tasks and partial files. Uninstall through **Windows Settings →
-Apps → V1D0Z@VR → Uninstall**, then remove its Chrome card. Downloaded media,
-`native\data` and `.updates` remain. Removing the card can erase its browser-local settings.
+**ZIP installation.** Verify and extract the new official ZIP separately. After
+protected work finishes, run its `Установить компоненты.exe`. Replace the complete
+`extension` folder at its existing path, then reload the current card and tabs.
+Both parts of the ZIP update manually. Rerun the component installer for repair.
+If a different installation already exists, use its own update or removal procedure.
+
+Remove Windows components for any option in **Windows Settings → Apps → V1D0Z@VR**.
+Downloaded media, `native\data`, `.updates`, and the separately extracted extension
+remain. Remove the Chrome card manually if desired. This may erase its preferences.
 
 ## Troubleshooting
 
 | Problem | Supported action |
 |---|---|
 | “Manifest missing” / “Could not load manifest” | Repeat **Load unpacked** and select the exact `extension` folder containing `manifest.json`. Downloads, its parent and a ZIP are wrong targets. |
-| Card exists, downloader disconnected | Check the Windows component is installed for the **same Windows user**, the correct Chrome profile and exact folder. `Check.cmd` in the installation checks files/registration; the popup checks the live connection. Repair with Setup after work finishes if needed. |
+| Card exists, downloader disconnected | Check the Windows component is installed for the **same Windows user**, the correct Chrome profile and exact folder. `Check.cmd` in the installation checks files/registration; the popup checks the live connection. For repair, rerun the installer for your installation method. |
 | Developer mode is off | Enable it in the intended profile, keep it on, and check that the existing card is enabled. |
 | Wrong profile or duplicate copies | Switch to the profile where you loaded VidoZavr and identify the intended permanent folder. Do not add another copy to fix a connection; removing a card may erase its preferences. |
 | Update finished, Chrome still shows the old version | After protected work finishes, reload the **existing card**, then refresh YouTube tabs. Do not delete paused data. |
@@ -122,8 +127,5 @@ Apps → V1D0Z@VR → Uninstall**, then remove its Chrome card. Downloaded media
 | SmartScreen warning | The installer is unsigned. Verify its official source/checksum; cancel if uncertain. |
 | Experimental blocked by another extension | Do not accept unrelated prompts blindly or disable other extensions. Close your Setup normally and use the recommended manual route. |
 
-Help: [GitHub Issues](https://github.com/zatylok/youtube-downloader-chrome/issues) or
-[@zatylok007](https://t.me/zatylok007). Send the version, exact error and short steps;
-never include cookies, tokens or private profiles.
 [Permissions and privacy](../../README.md#windows-warnings-permissions-and-privacy) ·
 [Options and languages](README.md)
