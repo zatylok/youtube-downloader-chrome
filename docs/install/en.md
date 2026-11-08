@@ -1,4 +1,4 @@
-# Install VidoZavr 1.2.63
+# Install VidoZavr 1.2.70
 
 **[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
@@ -8,11 +8,13 @@ and Internet for first installation**. No Python, Rust or Node.js is needed.
 The Windows component connects Chrome to the local download tools through Native
 Messaging; **the extension alone is not enough**.
 
+Version 1.2.70 brings one editor to regular videos and Shorts, with saved drafts and up to eight timed masks. Eraser uses local FFmpeg interpolation for stationary, unrotated rectangles on 8-bit SDR video. Complex backgrounds can show artifacts. A successful proxy test confirms connectivity. YouTube can still refuse metadata with `bot_check`. Select Direct manually when appropriate.
+
 ## Recommended installation: nine steps
 
-1. **Download [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr.exe).**
+1. **Download [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr.exe).**
    You do not need the extension ZIP as well. Use the official release and compare
-   its [SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/SHA256SUMS.txt).
+   its [SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/SHA256SUMS.txt).
 2. **Run the EXE and install Windows components.** Setup is Russian: **Далее = Next**,
    **Готово = Finish**. Wait for **Компоненты Windows установлены** (Windows components
    installed). Missing pinned tools are downloaded and checked; verified installed
@@ -29,7 +31,7 @@ Messaging; **the extension alone is not enough**.
    field and choose **Select Folder** (Russian Windows: **Папка**, **Выбор папки**).
    The selected folder must contain `manifest.json` directly. Select the folder,
    not the manifest file, Downloads, the parent installation directory or a ZIP.
-8. **Confirm one enabled V1D0Z@VR 🦖 card**, version **1.2.63**.
+8. **Confirm one enabled V1D0Z@VR 🦖 card**, version **1.2.70**.
    With Developer mode on, its ID is `bkihgeeibbodemeibfdcglojjkiepnlf`.
 9. **Open Chrome's puzzle-piece Extensions menu → V1D0Z@VR.**
    Check **Downloader connected** (Russian: **Загрузчик подключён**).
@@ -72,14 +74,14 @@ Windows picker screenshot is being simulated.
 
 ## Other installation options
 
-- **Standalone ZIP - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Extension.zip):**
+- **Standalone ZIP - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Extension.zip):**
   Download only this archive, verify its SHA-256, and extract all files to a permanent
   folder. Run the included **Установить компоненты.exe** (Install Windows components)
   as your regular Windows user. It installs the Native Host and missing verified tools.
   After Windows components are ready, follow steps 4-9 with the ZIP's `extension`
   folder containing `manifest.json`. Use the extracted folder for Chrome.
   `Check.cmd` in the Windows components folder verifies files and registration.
-- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Experimental.exe):**
+- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Experimental.exe):**
   attempts automatic enrollment using the same Windows installation. Developer mode,
   profile selection or permission decisions may be needed; other extensions may
   interrupt it. It is not guaranteed or fully unattended. Clean-Windows verification

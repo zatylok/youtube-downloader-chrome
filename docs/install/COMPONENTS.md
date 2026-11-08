@@ -1,4 +1,4 @@
-# VidoZavr 1.2.63 - components, downloads and integrity
+# VidoZavr 1.2.70 - components, downloads and integrity
 
 ## In plain language
 
@@ -17,8 +17,8 @@ Interface languages and maintained guides: [Русский](ru.md) | [English (U
 [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md). The Windows installer remains Russian.
 
 [Installation guides](README.md) ·
-[Pinned dependency catalog](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/online-dependencies.json) ·
-[Notices and license texts](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.63/VidoZavr-Documentation.zip)
+[Pinned dependency catalog](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/online-dependencies.json) ·
+[Notices and license texts](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Documentation.zip)
 
 The documentation ZIP is the unchanged release-time snapshot. The guides on the
 repository's `main` branch are maintained separately. References to `licenses/...`
@@ -26,7 +26,7 @@ below identify files in that ZIP and the installation, not missing repository pa
 
 ## Technical reference
 
-This is an audit of the pinned 1.2.63 build, not a list of current upstream versions.
+This is an audit of the pinned 1.2.70 build, not a list of current upstream versions.
 The machine-readable catalog is supplied as `online-dependencies.json` in the release
 and installation. All four tools below are required by this build; they are not optional
 plugins. The EXEs and the standalone ZIP are alternative ways to install the same

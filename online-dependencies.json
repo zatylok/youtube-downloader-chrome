@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "applicationVersion": "1.2.63",
+  "applicationVersion": "1.2.70",
   "components": [
     {
       "id": "yt-dlp",
