@@ -1,4 +1,4 @@
-# VidoZavr 1.2.70 installieren
+# VidoZavr 1.2.71 installieren
 
 **[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
@@ -8,13 +8,13 @@ Sie benötigen **Windows 11 x64, Chrome 127+ und Internet bei der Erstinstallati
 Python, Rust und Node.js sind nicht nötig. Die Windows-Komponente verbindet Chrome
 über Native Messaging mit den lokalen Werkzeugen. **Die Erweiterung allein reicht nicht.**
 
-Version 1.2.70 bietet einen gemeinsamen Editor für Videos und Shorts mit gespeicherten Entwürfen und bis zu acht zeitgesteuerten Masken. Die Entfernung nutzt lokale FFmpeg-Interpolation für feste, ungedrehte Rechtecke in 8-Bit-SDR. Auf komplexen Hintergründen können Spuren bleiben. Ein erfolgreicher Proxy-Test bestätigt die Verbindung. YouTube kann Metadaten trotzdem mit `bot_check` verweigern. Wählen Sie bei Bedarf manuell den Direktmodus.
+Version 1.2.71 bietet einen gemeinsamen Editor für Videos und Shorts mit gespeicherten Entwürfen und bis zu acht zeitgesteuerten Masken. Die Entfernung nutzt lokale FFmpeg-Interpolation für feste, ungedrehte Rechtecke in 8-Bit-SDR. Auf komplexen Hintergründen können Spuren bleiben. Ein erfolgreicher Proxy-Test bestätigt die Verbindung. YouTube kann Metadaten trotzdem mit `bot_check` verweigern. Wählen Sie bei Bedarf manuell den Direktmodus.
 
 ## Empfohlene Installation: neun Schritte
 
-1. **[VidoZavr.exe herunterladen](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr.exe).**
+1. **[VidoZavr.exe herunterladen](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr.exe).**
    Die zusätzliche ZIP ist nicht nötig. Nutzen Sie das offizielle Release und vergleichen
-   Sie die [SHA-256-Prüfsumme](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/SHA256SUMS.txt).
+   Sie die [SHA-256-Prüfsumme](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/SHA256SUMS.txt).
 2. **Die EXE starten und die Windows-Komponenten installieren.** Setup ist russisch:
    **Далее = Weiter**, **Готово = Fertigstellen**. Warten Sie auf **Компоненты Windows
    установлены** (Windows-Komponenten installiert). Fehlende festgelegte Werkzeuge
@@ -32,7 +32,7 @@ Version 1.2.70 bietet einen gemeinsamen Editor für Videos und Shorts mit gespei
    ein und bestätigen Sie mit **Ordner auswählen** (russisches Windows: **Папка**,
    **Выбор папки**). `manifest.json` muss direkt darin liegen. Wählen Sie den Ordner,
    nicht die Datei, „Downloads“, den übergeordneten Installationsordner oder eine ZIP.
-8. **Eine aktivierte Karte V1D0Z@VR 🦖** mit Version **1.2.70** prüfen.
+8. **Eine aktivierte Karte V1D0Z@VR 🦖** mit Version **1.2.71** prüfen.
    Im Entwicklermodus lautet die ID `bkihgeeibbodemeibfdcglojjkiepnlf`.
 9. **Chrome-Puzzlemenü „Erweiterungen“ → V1D0Z@VR** öffnen.
    Prüfen Sie **Downloader verbunden** (russisch: **Загрузчик подключён**).
@@ -77,7 +77,7 @@ Setup-Abschluss und Windows-Ordnerauswahl werden nicht durch nachgebildete Bilde
 
 ## Weitere Installationswege
 
-- **Eigenständige ZIP - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Extension.zip)**
+- **Eigenständige ZIP - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Extension.zip)**
   Laden Sie nur dieses Archiv herunter, prüfen Sie den SHA-256-Wert und entpacken
   Sie alle Dateien in einen dauerhaften Ordner. Starten Sie **Установить компоненты.exe**
   (Windows-Komponenten installieren) mit Ihrem normalen Windows-Konto.
@@ -85,7 +85,7 @@ Setup-Abschluss und Windows-Ordnerauswahl werden nicht durch nachgebildete Bilde
   Folgen Sie danach den Schritten 4 bis 9 mit dem Ordner `extension` aus der ZIP,
   der `manifest.json` enthält. `Check.cmd` im Komponentenordner prüft Dateien
   und Registrierung.
-- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Experimental.exe):**
+- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Experimental.exe):**
   versucht die automatische Einbindung mit derselben Windows-Installation.
   Entwicklermodus, Profilauswahl oder Berechtigungsentscheidungen können nötig sein;
   andere Erweiterungen können stören. Weder Erfolg noch unbeaufsichtigter Ablauf

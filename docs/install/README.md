@@ -1,4 +1,4 @@
-# Install VidoZavr 1.2.70
+# Install VidoZavr 1.2.71
 
 **[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
@@ -8,7 +8,7 @@ Deutsch, العربية**. The Windows Setup interface is Russian; these guides 
 
 ## Recommended: Windows installer, then manual Chrome connection
 
-[**Download VidoZavr.exe**](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr.exe)
+[**Download VidoZavr.exe**](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr.exe)
 
 Install Windows components, read the extension path on the final Setup page, then
 load that exact folder from Chrome's **Load unpacked** action. The EXE already provides
@@ -22,8 +22,8 @@ Choose the folder containing `manifest.json`, not its parent or the ZIP.
 
 | Option | Download | Responsibilities |
 |---|---|---|
-| Standalone ZIP | [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Extension.zip) | Extract to a permanent folder. Run the included `Установить компоненты.exe` to install the Native Host. Then load the ZIP's separate `extension` folder in Chrome. |
-| **Beta/Experimental** | [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Experimental.exe) | Attempts automatic enrollment; profile selection, Developer mode, permission prompts or other extensions can prevent completion. Read the [limitations](EXPERIMENTAL.md). |
+| Standalone ZIP | [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Extension.zip) | Extract to a permanent folder. Run the included `Установить компоненты.exe` to install the Native Host. Then load the ZIP's separate `extension` folder in Chrome. |
+| **Beta/Experimental** | [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Experimental.exe) | Attempts automatic enrollment; profile selection, Developer mode, permission prompts or other extensions can prevent completion. Read the [limitations](EXPERIMENTAL.md). |
 
 All routes share one Windows installation identity. Choose one route per user.
 The standard and Experimental EXEs use signed updates for their managed folders.
@@ -31,7 +31,7 @@ The ZIP uses manual updates for both parts. Remove Windows components through
 Windows Installed apps, then remove the Chrome card separately if desired. The public Experimental asset is named
 `VidoZavr-Experimental.exe`; `experimental/` is only its local build subdirectory.
 
-[Checksums](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/SHA256SUMS.txt) ·
+[Checksums](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/SHA256SUMS.txt) ·
 [Components, exact sources and licenses](COMPONENTS.md) · [Main README](../../README.md)
 
 ## About the illustrations
@@ -47,6 +47,6 @@ installation. The card illustrations show the real extension/version, not a new
 Native connection test. The original full controls image remains
 [available](images/chrome-extensions.png).
 
-The downloadable [documentation ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Documentation.zip)
+The downloadable [documentation ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Documentation.zip)
 remains the unchanged release-time snapshot, including license texts. These repository
 guides receive documentation corrections without changing the release binaries.

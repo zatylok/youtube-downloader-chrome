@@ -1,4 +1,4 @@
-# Установка VidoZavr 1.2.70
+# Установка VidoZavr 1.2.71
 
 **[Русский](ru.md) | [English (US)](en.md) | [Français](fr.md) | [Deutsch](de.md) | [العربية](ar.md)**
 
@@ -8,13 +8,13 @@ Chrome 127+ и интернет при первой установке**. Python
 Windows-компонент связывает Chrome с локальным загрузчиком через Native Messaging.
 **Одного расширения недостаточно.**
 
-В версии 1.2.70 единый редактор видео и Shorts сохраняет черновики и поддерживает до восьми масок со своими интервалами. «Удаление ✨» использует локальную интерполяцию FFmpeg для неподвижной прямоугольной области без поворота на 8-битном SDR. На сложном фоне могут остаться следы. Тест прокси проверяет связь, но YouTube может отказать в выдаче метаданных с кодом `bot_check`. При необходимости выберите «Напрямую» вручную.
+В версии 1.2.71 единый редактор видео и Shorts сохраняет черновики и поддерживает до восьми масок со своими интервалами. «Удаление ✨» использует локальную интерполяцию FFmpeg для неподвижной прямоугольной области без поворота на 8-битном SDR. На сложном фоне могут остаться следы. Тест прокси проверяет связь, но YouTube может отказать в выдаче метаданных с кодом `bot_check`. При необходимости выберите «Напрямую» вручную.
 
 ## Рекомендуемая установка: девять шагов
 
-1. **Скачайте [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr.exe).**
+1. **Скачайте [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr.exe).**
    Дополнительный ZIP не нужен. Используйте официальный релиз и сравните
-   [SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/SHA256SUMS.txt).
+   [SHA-256](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/SHA256SUMS.txt).
 2. **Запустите EXE и установите компоненты Windows.** Нажмите **Далее** и дождитесь
    экрана **Компоненты Windows установлены**. Недостающие закреплённые инструменты
    скачиваются и проверяются; проверенные установленные файлы используются повторно.
@@ -31,7 +31,7 @@ Windows-компонент связывает Chrome с локальным за�
    и нажмите **Выбор папки**. Внутри выбранной папки должен лежать `manifest.json`.
    Выбирайте папку, а не сам файл: «Загрузки», родительская папка программы и ZIP
    не подходят.
-8. **Проверьте одну включённую карточку V1D0Z@VR 🦖**, версия **1.2.70**.
+8. **Проверьте одну включённую карточку V1D0Z@VR 🦖**, версия **1.2.71**.
    В режиме разработчика виден ID `bkihgeeibbodemeibfdcglojjkiepnlf`.
 9. **Откройте меню расширений Chrome со значком пазла → V1D0Z@VR.**
    Должен появиться статус **Загрузчик подключён**. При желании закрепите значок.
@@ -74,14 +74,14 @@ Chrome, Chrome 156 или чистой Windows. Карточка служит и
 
 ## Другие варианты установки
 
-- **Автономный ZIP - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Extension.zip):**
+- **Автономный ZIP - [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Extension.zip):**
   Скачайте только этот архив, сравните SHA-256 и извлеките все файлы в постоянную
   папку. Запустите вложенный **«Установить компоненты.exe»** обычным пользователем
   Windows. Он установит загрузчик и недостающие проверенные инструменты.
   Когда Windows-компоненты готовы, выполните шаги 4-9 с папкой `extension` из
   распакованного ZIP, где лежит `manifest.json`. Путь папки компонентов для Chrome
   не подходит. `Check.cmd` в папке компонентов проверяет файлы и регистрацию.
-- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Experimental.exe):**
+- **Beta/Experimental - [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Experimental.exe):**
   пытается подключить Chrome автоматически и использует ту же установку Windows.
   Могут потребоваться режим разработчика, выбор профиля и решения по разрешениям;
   другие расширения могут помешать. Успех и полностью автоматическая работа не

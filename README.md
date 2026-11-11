@@ -7,11 +7,48 @@
 A free Chrome extension for YouTube downloads and video tools, with local processing
 on Windows. All functions are free, with no PRO tier or subscription.
 
-## [Скачать VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr.exe)
+## [Скачать VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr.exe)
 
 Рекомендуемый установщик для Windows 11 x64 и Chrome 127+.
 Он устанавливает компоненты Windows и папку расширения. Подключение этой папки
 к Chrome выполняется вручную. Дополнительный ZIP не нужен.
+
+**Другие варианты:** [автономный ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Extension.zip) · [Beta/Experimental](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Experimental.exe)
+
+## Как выглядит VidoZavr
+
+Реальный интерфейс 1.2.71 на небольших синтетических видео в изолированном профиле. Загрузка и предпросмотр удаления используют настоящий Native Host и FFmpeg. Фон Shorts в этих снимках является контролируемым стендом, а не публичной страницей YouTube. [Происхождение снимков](docs/screenshots/1.2.71/README.md).
+
+| Прямо на видео | Загрузки |
+|---|---|
+| [![Кнопки загрузки, редактора и журнала](docs/screenshots/1.2.71/shorts-download-controls.png)](docs/screenshots/1.2.71/shorts-download-controls.png) | [![Настоящий прогресс и готовый файл](docs/screenshots/1.2.71/download-queue.png)](docs/screenshots/1.2.71/download-queue.png) |
+
+| Единый редактор | Маски по времени |
+|---|---|
+| [![Выбор времени и области кадра](docs/screenshots/1.2.71/editor-trim-crop.png)](docs/screenshots/1.2.71/editor-trim-crop.png) | [![Размытие, пикселизация и заливка](docs/screenshots/1.2.71/timed-masks.png)](docs/screenshots/1.2.71/timed-masks.png) |
+
+<details>
+<summary>Удаление, папки, прокси и история обновлений</summary>
+
+| Обработанный стоп-кадр | Папки по типу видео |
+|---|---|
+| [![Реальный предпросмотр удаления FFmpeg](docs/screenshots/1.2.71/eraser-preview.png)](docs/screenshots/1.2.71/eraser-preview.png) | [![Настройки папок сохранения](docs/screenshots/1.2.71/saving-folders.png)](docs/screenshots/1.2.71/saving-folders.png) |
+
+| Десять слотов прокси | Сохранённая история версий |
+|---|---|
+| [![Пустой изолированный пул прокси](docs/screenshots/1.2.71/proxy-pool.png)](docs/screenshots/1.2.71/proxy-pool.png) | [![Разворачиваемые изменения версий](docs/screenshots/1.2.71/update-history.png)](docs/screenshots/1.2.71/update-history.png) |
+
+Нажмите изображение, чтобы открыть его в полном размере. Личные файлы и настройки владельца не использованы.
+
+</details>
+
+## Новое в 1.2.71
+
+- Отрезки с подходящим начальным ключевым кадром копируются без лишнего перекодирования, включая конец внутри последнего кадра.
+- Убраны лишние декодирующие проверки; сохранены проверки качества, всех выбранных пакетов, времени и звука.
+- Исправлены папки для отредактированных Shorts и обычных видео. Этапы копирования и кодирования теперь различаются в журнале.
+
+Исходное качество сохраняется. Размер файла не уменьшается автоматически, а общее время зависит от источника и сети. Для меньшего доступного исходника можно явно выбрать «До 1080p» или «До 720p» в редакторе. Это отдельная настройка качества скачивания, а не качества просмотра.
 
 ## Возможности
 
@@ -50,9 +87,9 @@ on Windows. All functions are free, with no PRO tier or subscription.
 
 | Вариант | Файл | Как работает |
 |---|---|---|
-| **Рекомендуется** | **[VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr.exe)** | Устанавливает компоненты Windows и управляемую папку расширения. Затем подключите её вручную в Chrome. |
-| Автономный ZIP | [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Extension.zip) | Распакуйте архив в постоянную папку и запустите вложенный `Установить компоненты.exe`. Затем вручную загрузите отдельную папку `extension` из ZIP. |
-| **Beta/Experimental** | [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Experimental.exe) | Пробует подключить Chrome автоматически. Возможны выбор профиля, запросы разрешений и блокировки другими расширениями. Успех не гарантируется. |
+| **Рекомендуется** | **[VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr.exe)** | Устанавливает компоненты Windows и управляемую папку расширения. Затем подключите её вручную в Chrome. |
+| Автономный ZIP | [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Extension.zip) | Распакуйте архив в постоянную папку и запустите вложенный `Установить компоненты.exe`. Затем вручную загрузите отдельную папку `extension` из ZIP. |
+| **Beta/Experimental** | [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Experimental.exe) | Пробует подключить Chrome автоматически. Возможны выбор профиля, запросы разрешений и блокировки другими расширениями. Успех не гарантируется. |
 
 Все варианты используют один ID расширения и одну регистрацию. Выберите один способ установки.
 [Ограничения Experimental](docs/install/EXPERIMENTAL.md) описаны отдельно.
@@ -97,7 +134,7 @@ Setup и установщик компонентов получают недос
 [Компоненты, источники и лицензии](docs/install/COMPONENTS.md) описаны подробно.
 
 Установщики **не подписаны Windows Authenticode**, поэтому возможны предупреждения
-SmartScreen. Сверьте [контрольные суммы](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/SHA256SUMS.txt)
+SmartScreen. Сверьте [контрольные суммы](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/SHA256SUMS.txt)
 и официальный источник; при сомнении отмените запуск. Не отключайте защиту.
 Обновления приложения проверяются подписью **Ed25519**. Это отдельная защита,
 которая не заменяет Windows-подпись установщика.
@@ -111,6 +148,8 @@ SmartScreen. Сверьте [контрольные суммы](https://github.c
 
 <details>
 <summary>English overview</summary>
+
+Version 1.2.71 avoids unnecessary encoding for safely copyable clips, removes redundant decoding and fixes edited-Shorts/video-clip destinations. Original quality can still produce large files; explicitly select an available lower-resolution source when desired. Non-keyframe cuts and effects can require slower encoding.
 
 V1D0Z@VR downloads YouTube videos and Shorts directly on YouTube, including channel
 and playlist videos. Available source quality can include 1080p, 1440p (2K), 4K,

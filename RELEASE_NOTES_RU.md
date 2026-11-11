@@ -1,65 +1,83 @@
-# V1D0Z@VR 1.2.70 🦖
+**V1D0Z@VR 1.2.71 🦖** - бесплатное расширение Chrome для загрузок и редактирования прямо на YouTube. Все функции бесплатны. Обработка медиа выполняется на вашем Windows-ПК.
 
-Бесплатное расширение Chrome для загрузок и редактирования прямо на YouTube.
-Обработка выполняется на вашем Windows-ПК. Все функции бесплатны.
+## Скачать и установить
 
-## Что изменилось после 1.2.63
+| Вариант | Для кого |
+|---|---|
+| **[VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr.exe)** | **Рекомендуется.** Установите компоненты Windows, затем вручную подключите указанную Setup папку в Chrome. Дополнительный ZIP не нужен. |
+| [Автономный ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Extension.zip) | Распакуйте в постоянную папку. Запустите вложенный `Установить компоненты.exe`, затем отдельно загрузите папку `extension` из ZIP. Обе части обновляются вручную. |
+| [Beta/Experimental](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Experimental.exe) | Пробует подключить Chrome автоматически. Возможны режим разработчика, выбор профиля и запросы разрешений. Успех не гарантируется. |
 
-- Один редактор для обычных видео и Shorts. Выбирайте время начала и конца, обрезайте область кадра и продолжайте редактирование из автоматически сохранённого черновика.
-- До восьми масок с отдельными интервалами. Размытие, пикселизация и заливка поддерживают поворот.
-- «Удаление ✨» заполняет область локальной интерполяцией FFmpeg. Обработанный стоп-кадр доступен, когда редактор может прочитать исходный кадр. Для экспорта подходят неподвижные прямоугольники без поворота на 8-битном SDR. HDR и 10-битные потоки для удаления не поддерживаются. Сложный фон может оставить заметные следы.
-- Компактные настройки пула из десяти прокси HTTP/SOCKS5 и понятные причины ошибок. Учётные данные защищены Windows DPAPI. Успешный тест подтверждает связь, но YouTube может вернуть `bot_check` при запросе метаданных. При необходимости выберите «Напрямую» вручную.
-- Страница обновлений хранит до десяти известных версий и различает установленную и проверенную публичную версии.
+Для ручного подключения откройте `chrome://extensions`, включите режим разработчика и нажмите «Загрузить распакованное расширение». Выберите именно папку `extension` с `manifest.json`. Нужны Windows 11 x64, Chrome 127+ и интернет при первой установке.
 
-По-прежнему доступны до десяти одновременных загрузок, выбор качества скачивания и воспроизведения, каналы, плейлисты, запись LIVE с доступного начала, возобновление при поддержке источником, очередь, прогресс и папки. 4K, 60 FPS и HDR зависят от источника и формата. Другие платформы планируются. Сейчас поддерживается YouTube.
+[Русский](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/ru.md) | [English (US)](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/en.md) | [Français](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/fr.md) | [Deutsch](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/de.md) | [العربية](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/ar.md)
 
-## Установка
+## Новое в 1.2.71
 
-1. **Рекомендуется [VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr.exe).** Запустите Setup. В `chrome://extensions` включите режим разработчика и загрузите распакованную папку `extension`, указанную в Setup.
-2. **[Автономный ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Extension.zip).** Распакуйте в постоянную папку. Запустите вложенный `Установить компоненты.exe`, затем отдельно подключите папку `extension` из ZIP. Обновляйте обе части вручную.
-3. **[Beta/Experimental](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Experimental.exe).** Пробует подключить Chrome автоматически. Возможны выбор профиля, режим разработчика, запросы разрешений или блокировка сторонним расширением.
+- Быстрее обработка обычных временных отрезков: убраны лишние декодирующие проверки.
+- Исправлено ненужное перекодирование, когда начало совпадает с ключевым кадром, а конец находится внутри последнего кадра. Выбранные кадры и исходное качество сохраняются.
+- Исправлены папки для отредактированных Shorts и отрезков обычного видео.
+- Улучшена проверка скопированных пакетов, FPS и времени. Журнал различает копирование, кодирование и проверку.
 
-Windows 11 x64, Chrome 127+ и интернет для первой установки. Setup проверяет закреплённые инструменты, полученные напрямую у их поставщиков. Установщики не имеют подписи Windows Authenticode, поэтому возможны предупреждения SmartScreen. Сверьте SHA-256. Управляемые установки проверяют подпись Ed25519 обновлений.
+[**Посмотреть интерфейс и примеры редактора**](https://github.com/zatylok/youtube-downloader-chrome/tree/v1.2.71#как-выглядит-vidozavr)
 
-## English (US)
+По-прежнему доступны видео, Shorts, каналы, плейлисты, LIVE с доступного начала, единый редактор с обрезкой по времени и кадру, восемь масок, поворот, «Удаление ✨», черновики, возобновление, десять одновременных загрузок, прокси и история обновлений. Качество просмотра и скачивания выбирается отдельно. Сейчас поддерживается YouTube; другие платформы планируются.
 
-A free Windows Chrome extension for downloading and editing directly on YouTube. All features are free and media processing stays on your PC.
+## Важно
 
-**New since 1.2.63.** One editor for videos and Shorts combines time-range trimming, spatial cropping and automatic per-video drafts. Add up to eight independently timed masks. Blur, pixelation and solid fill support rotation. Eraser uses local FFmpeg interpolation and can show a processed still when a source frame is readable. Eraser export supports stationary, unrotated rectangles in 8-bit SDR. HDR and 10-bit Eraser exports are unsupported. Complex backgrounds can show artifacts.
+- Исходное качество может давать большие файлы. Для меньшего доступного исходника явно выберите «До 1080p» или «До 720p» в редакторе. Автоматического сжатия нет. Точное начало между ключевыми кадрами и эффекты могут требовать более долгого кодирования; время также зависит от сети и источника.
+- Удаление подходит для простых неподвижных прямоугольников без поворота в 8-битном SDR. На сложном фоне возможны следы.
+- Тест прокси проверяет связь. YouTube может отклонить метаданные с `bot_check`; режим «Напрямую» можно выбрать вручную.
+- Установщики не подписаны Windows Authenticode. Сверяйте SHA-256 и официальный источник. Не отключайте защиту. Обновления приложения отдельно проверяются подписью Ed25519.
 
-The compact proxy settings offer ten HTTP/SOCKS5 slots with Windows-protected credentials and clearer diagnostics. A successful test confirms connectivity. YouTube may still refuse metadata with `bot_check`. Select Direct manually when appropriate. Updates retains up to ten known versions and distinguishes the installed version from verified public releases.
+<details>
+<summary>English (US)</summary>
 
-Existing features include up to ten simultaneous downloads, separate download and playback quality controls, channels, playlists, LIVE recording from the beginning when available, resumable downloads where supported and a task queue with progress and folders. 4K, 60 FPS and HDR depend on the source and format. YouTube is supported today. More platforms are planned.
+A free Windows Chrome extension for downloads and editing directly on YouTube. Every feature is free; media processing stays on your PC.
 
-**Install.** Use the standard EXE and load the folder shown by Setup in Chrome. For the standalone ZIP, run its included Windows component installer, then load the separate extracted `extension` folder. Update both ZIP parts manually. Experimental attempts automatic Chrome enrollment and can require user action. Windows installers are Authenticode unsigned. Verify their checksums. Ed25519 protects managed application updates separately.
+**New:** faster temporal-clip validation, removal of unnecessary encoding at safe keyframe starts, corrected edited-Shorts/video-clip folders, and clearer copy/encode/validate stages. Ordered packet and timestamp checks preserve the selected original frames, resolution and audio.
 
-## Français
+Choose the recommended EXE, the standalone ZIP with its included Windows component installer and separate `extension` folder, or the optional Beta/Experimental automatic installer. Standard enrollment is manual in `chrome://extensions`. Use the [English guide](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/en.md).
 
-L’éditeur commun aux vidéos YouTube et aux Shorts réunit le découpage temporel, le recadrage, les brouillons automatiques et huit masques au maximum. Le flou, la pixellisation et l’aplat sont orientables. L’effacement et son aperçu fixe utilisent FFmpeg localement. L’export est limité aux rectangles fixes sans rotation en SDR 8 bits. Un fond complexe peut laisser des traces. Le pool compte dix emplacements HTTP/SOCKS5 et le journal conserve dix versions au maximum. YouTube peut refuser les métadonnées (`bot_check`) après un test de connexion réussi. Vous pouvez choisir le mode direct manuellement.
+Original-quality files can be large. Explicitly select an available 1080p/720p source for a smaller file. There is no automatic compression. Non-keyframe cuts and effects can require slower encoding. Eraser supports stationary unrotated 8-bit SDR rectangles and can leave artifacts. Proxy connectivity does not guarantee YouTube metadata access. Installers are Authenticode unsigned; verify checksums. Ed25519 protects app updates separately. Only YouTube is supported today; more platforms are planned.
 
-Toutes les fonctions sont gratuites. Pour l’EXE standard, chargez le dossier indiqué par Setup dans Chrome. Pour le ZIP, installez d’abord le composant inclus puis chargez le dossier `extension` séparé. Les deux parties du ZIP se mettent à jour manuellement. Le mode Experimental peut demander une intervention. Les EXE ne sont pas signés par Authenticode.
+</details>
 
-## Deutsch
+<details>
+<summary>Français</summary>
 
-Der gemeinsame Editor für YouTube-Videos und Shorts bietet Zeitausschnitte, Zuschneiden, automatische Entwürfe und bis zu acht Masken mit eigenen Zeitintervallen. Unschärfe, Verpixelung und Farbfüllung sind drehbar. Die Entfernung und ihr Vorschaubild nutzen FFmpeg lokal. Der Export unterstützt feste, ungedrehte Rechtecke in 8-Bit-SDR. Komplexe Hintergründe können sichtbare Spuren zeigen. Es gibt zehn HTTP/SOCKS5-Proxyplätze und einen Verlauf für bis zu zehn Versionen. YouTube kann Metadaten trotz erfolgreichem Proxy-Test mit `bot_check` verweigern. Bei Bedarf können Sie manuell den Direktmodus wählen.
+Extension Chrome gratuite pour télécharger et éditer directement sur YouTube, avec traitement local sous Windows. Toutes les fonctions sont gratuites.
 
-Alle Funktionen sind kostenlos. Laden Sie nach dem Standard-Setup den dort gezeigten Ordner in Chrome. Beim ZIP führen Sie zuerst den enthaltenen Komponenteninstaller aus und laden dann den separaten Ordner `extension`. Beide ZIP-Teile werden manuell aktualisiert. Experimental kann Eingaben erfordern. Die EXE-Dateien haben keine Authenticode-Signatur.
+Cette version évite le réencodage inutile des extraits commençant sur une image clé, accélère la validation et corrige les dossiers des Shorts édités et des extraits vidéo. Les images, leur chronologie et le son d’origine sont vérifiés.
 
-## العربية
+Choisissez l’EXE recommandé, le ZIP avec son installateur de composants et son dossier `extension` séparé, ou le mode Beta/Experimental non garanti. [Guide français](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/fr.md). La qualité d’origine peut produire de gros fichiers; sélectionnez explicitement une source 1080p/720p disponible si nécessaire. L’effacement est limité aux rectangles fixes sans rotation en SDR 8 bits. Un proxy accessible peut être refusé par YouTube. Les EXE ne sont pas signés par Authenticode. Seul YouTube est pris en charge actuellement.
+
+</details>
+
+<details>
+<summary>Deutsch</summary>
+
+Kostenlose Chrome-Erweiterung für Downloads und Bearbeitung direkt auf YouTube. Die Medienverarbeitung bleibt auf dem Windows-PC; alle Funktionen sind kostenlos.
+
+Diese Version vermeidet unnötiges Kodieren bei geeigneten Schlüsselbild-Anfängen, beschleunigt die Prüfung und korrigiert die Zielordner bearbeiteter Shorts und Videoausschnitte. Originalbilder, Zeitstempel und Audio werden geprüft.
+
+Wählen Sie das empfohlene EXE, das ZIP mit separatem Komponenteninstaller und `extension`-Ordner oder Beta/Experimental ohne Erfolgsgarantie. [Deutsche Anleitung](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/de.md). Originalqualität kann große Dateien erzeugen; eine verfügbare 1080p/720p-Quelle ist ausdrücklich wählbar. Entfernen unterstützt feste ungedrehte Rechtecke in 8-Bit-SDR. YouTube kann trotz erfolgreichem Proxy-Test Metadaten verweigern. Die EXE-Dateien haben keine Authenticode-Signatur. Derzeit wird nur YouTube unterstützt.
+
+</details>
+
+<details>
+<summary>العربية</summary>
 
 <div dir="rtl" lang="ar">
 
-يجمع محرّر فيديوهات YouTube وShorts بين اختيار المقطع الزمني وقص الإطار وحفظ المسودات تلقائيًا وإضافة ما يصل إلى ثمانية أقنعة بتوقيت مستقل. يمكن تدوير التمويه والبكسلة والتعبئة اللونية. تستخدم الإزالة ومعاينة الصورة الثابتة FFmpeg محليًا. يقتصر تصدير الإزالة على مستطيلات ثابتة وغير مدوّرة ضمن فيديو SDR بعمق 8 بت. قد تترك الخلفيات المعقّدة آثارًا. تتوفر عشرة مواضع لوكلاء HTTP/SOCKS5 وسجل حتى عشرة إصدارات. قد يرفض YouTube البيانات الوصفية بالرمز `bot_check` رغم نجاح اختبار الوكيل. يمكن اختيار الاتصال المباشر يدويًا.
+إضافة Chrome مجانية لتنزيل وتحرير فيديوهات YouTube مباشرة، مع معالجة محلية على جهاز Windows. جميع الوظائف مجانية.
 
-جميع الوظائف مجانية. بعد تشغيل المثبّت القياسي، حمّل المجلد الذي يعرضه في Chrome. في حزمة ZIP شغّل مثبّت المكوّنات المرفق ثم حمّل مجلد `extension` المنفصل. حدّث الجزأين يدويًا. قد يحتاج التثبيت التجريبي إلى تدخّل المستخدم. ملفات EXE لا تحمل توقيع Authenticode.
+يتجنب هذا الإصدار إعادة الترميز غير الضرورية للمقاطع التي تبدأ بإطار مفتاح مناسب، ويسرّع التحقق ويصحح مجلدات Shorts المعدّلة والمقاطع العادية، مع التحقق من الإطارات والتوقيت والصوت الأصلي.
+
+اختر EXE الموصى به، أو ZIP الذي يحتوي مثبّت المكوّنات ومجلد `extension` المنفصل، أو Beta/Experimental غير المضمون. [الدليل العربي](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.71/docs/install/ar.md). قد تكون ملفات الجودة الأصلية كبيرة؛ يمكن اختيار مصدر متاح بدقة 1080p أو 720p صراحةً. تقتصر الإزالة على مستطيلات ثابتة غير مدوّرة في SDR بعمق 8 بت. قد يرفض YouTube الوكيل رغم نجاح الاتصال. المثبّتات غير موقعة بـ Authenticode. يدعم التطبيق YouTube فقط حاليًا.
 
 </div>
 
-[Русский](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.70/docs/install/ru.md) |
-[English (US)](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.70/docs/install/en.md) |
-[Français](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.70/docs/install/fr.md) |
-[Deutsch](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.70/docs/install/de.md) |
-[العربية](https://github.com/zatylok/youtube-downloader-chrome/blob/v1.2.70/docs/install/ar.md)
+</details>
 
-[SHA256SUMS.txt](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/SHA256SUMS.txt) |
-[Documentation and licenses](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.70/VidoZavr-Documentation.zip)
+[SHA256SUMS.txt](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/SHA256SUMS.txt) · [Documentation and licenses](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Documentation.zip)
