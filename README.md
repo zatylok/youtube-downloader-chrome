@@ -7,13 +7,13 @@
 A free Chrome extension for YouTube downloads and video tools, with local processing
 on Windows. All functions are free, with no PRO tier or subscription.
 
-## [Скачать VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr.exe)
+## [Скачать VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.72/VidoZavr.exe)
 
 Рекомендуемый установщик для Windows 11 x64 и Chrome 127+.
 Он устанавливает компоненты Windows и папку расширения. Подключение этой папки
 к Chrome выполняется вручную. Дополнительный ZIP не нужен.
 
-**Другие варианты:** [автономный ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Extension.zip) · [Beta/Experimental](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Experimental.exe)
+**Другие варианты:** [автономный ZIP](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.72/VidoZavr-Extension.zip) · [Beta/Experimental](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.72/VidoZavr-Experimental.exe)
 
 ## Как выглядит VidoZavr
 
@@ -42,11 +42,13 @@ on Windows. All functions are free, with no PRO tier or subscription.
 
 </details>
 
-## Новое в 1.2.71
+## Новое в 1.2.72
 
-- Отрезки с подходящим начальным ключевым кадром копируются без лишнего перекодирования, включая конец внутри последнего кадра.
-- Убраны лишние декодирующие проверки; сохранены проверки качества, всех выбранных пакетов, времени и звука.
-- Исправлены папки для отредактированных Shorts и обычных видео. Этапы копирования и кодирования теперь различаются в журнале.
+- Время масок считается от начала выходного отрезка. Изменение границ отрезка сохраняет выбранные относительные интервалы масок.
+- Предпросмотр обрезки по времени, кадру и масок согласован; прежние черновики читаются с их исходным смыслом.
+- Исправлен пропуск первого автоматического перехода Shorts после загрузки.
+- История обновлений показывает десять версий, включая 1.2.71 и 1.2.72, и различает публичные и локальные сборки.
+- Понятнее объясняется отказ при повреждённых временных метках. Проверки качества и исходных кадров сохранены.
 
 Исходное качество сохраняется. Размер файла не уменьшается автоматически, а общее время зависит от источника и сети. Для меньшего доступного исходника можно явно выбрать «До 1080p» или «До 720p» в редакторе. Это отдельная настройка качества скачивания, а не качества просмотра.
 
@@ -87,9 +89,9 @@ on Windows. All functions are free, with no PRO tier or subscription.
 
 | Вариант | Файл | Как работает |
 |---|---|---|
-| **Рекомендуется** | **[VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr.exe)** | Устанавливает компоненты Windows и управляемую папку расширения. Затем подключите её вручную в Chrome. |
-| Автономный ZIP | [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Extension.zip) | Распакуйте архив в постоянную папку и запустите вложенный `Установить компоненты.exe`. Затем вручную загрузите отдельную папку `extension` из ZIP. |
-| **Beta/Experimental** | [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/VidoZavr-Experimental.exe) | Пробует подключить Chrome автоматически. Возможны выбор профиля, запросы разрешений и блокировки другими расширениями. Успех не гарантируется. |
+| **Рекомендуется** | **[VidoZavr.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.72/VidoZavr.exe)** | Устанавливает компоненты Windows и управляемую папку расширения. Затем подключите её вручную в Chrome. |
+| Автономный ZIP | [VidoZavr-Extension.zip](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.72/VidoZavr-Extension.zip) | Распакуйте архив в постоянную папку и запустите вложенный `Установить компоненты.exe`. Затем вручную загрузите отдельную папку `extension` из ZIP. |
+| **Beta/Experimental** | [VidoZavr-Experimental.exe](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.72/VidoZavr-Experimental.exe) | Пробует подключить Chrome автоматически. Возможны выбор профиля, запросы разрешений и блокировки другими расширениями. Успех не гарантируется. |
 
 Все варианты используют один ID расширения и одну регистрацию. Выберите один способ установки.
 [Ограничения Experimental](docs/install/EXPERIMENTAL.md) описаны отдельно.
@@ -134,7 +136,7 @@ Setup и установщик компонентов получают недос
 [Компоненты, источники и лицензии](docs/install/COMPONENTS.md) описаны подробно.
 
 Установщики **не подписаны Windows Authenticode**, поэтому возможны предупреждения
-SmartScreen. Сверьте [контрольные суммы](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.71/SHA256SUMS.txt)
+SmartScreen. Сверьте [контрольные суммы](https://github.com/zatylok/youtube-downloader-chrome/releases/download/v1.2.72/SHA256SUMS.txt)
 и официальный источник; при сомнении отмените запуск. Не отключайте защиту.
 Обновления приложения проверяются подписью **Ed25519**. Это отдельная защита,
 которая не заменяет Windows-подпись установщика.
